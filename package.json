@@ -9,14 +9,17 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "env-cmd": "^10.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd -f .env-development react-scripts start",
+    "build": "env-cmd -f .env-development react-scripts build",
+    "start-prod": "env-cmd -f .env-production react-scripts start",
+    "build-prod": "env-cmd -f .env-production react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
