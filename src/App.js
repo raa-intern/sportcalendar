@@ -1,13 +1,18 @@
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import { Switch, Route, Redirect } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import EventPage from "./pages/EventPage";
+
 function App() {
   return (
-    <div>
-      <Header />
-      <div style={{ height: "100vh", textAlign: "center" }}>CONTENT HERE</div>
-      <Footer />
-    </div>
+    <Switch>
+      <Route path="/" exact>
+        <HomePage />
+      </Route>
+      <Route path="/event/:eventId">
+        <EventPage />
+      </Route>
+      <Redirect to="/" />
+    </Switch>
   );
 }
 
