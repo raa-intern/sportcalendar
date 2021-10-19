@@ -24,7 +24,9 @@
     "start-prod": "env-cmd -f .env-production react-scripts start",
     "build-prod": "env-cmd -f .env-production react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy -p"
   },
   "eslintConfig": {
     "extends": [
