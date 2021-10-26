@@ -1,4 +1,5 @@
 import React from "react";
+import SecondHeader from "./SecondHeader";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,6 +10,7 @@ import IconButton from "@mui/material/IconButton";
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
+      <SecondHeader />
       <AppBar position="static">
         <Toolbar>
           <IconButton
