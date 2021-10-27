@@ -12,13 +12,8 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import LoginModal from "./LoginModal";
 
 export default function SecondHeader() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
   return (
     <AppBar
       position="static"
@@ -63,12 +58,10 @@ export default function SecondHeader() {
         underline="none"
         color="success"
         sx={{ display: "flex", alignItems: "center", mr: 2 }}
-        onClick={handleOpen}
       >
         <FavoriteIcon />
         Допомогти проекту
       </Link>
-      <LoginModal handleClose={handleClose} open={open} />
     </AppBar>
   );
 }
