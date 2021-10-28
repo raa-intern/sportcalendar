@@ -1,5 +1,6 @@
 import React from "react";
 import SecondHeader from "./SecondHeader";
+import LoginModal from "./LoginModal";
 import {
   AppBar,
   Box,
@@ -10,6 +11,9 @@ import {
 } from "@mui/material";
 
 export default function ButtonAppBar() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <SecondHeader />
@@ -24,7 +28,10 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Sport Calendar
           </Typography>
-          <Button color="inherit">Login</Button>
+          <LoginModal handleClose={handleClose} open={open} />
+          <Button color="inherit" onClick={handleOpen}>
+            Login
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
