@@ -1,16 +1,20 @@
 import React from "react";
-import { withStyles, MenuItem } from "@material-ui/core";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContent from "@material-ui/core/DialogContent";
-import Grid from "@material-ui/core/Grid";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
+import { withStyles } from "@material-ui/core";
+import Dialog from "@mui/material/Dialog";
+import { DialogContent } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Divider from "@mui/material/Divider";
+import { IconButton } from "@mui/material";
+import Button from "@mui/material/Button";
 import CloseIcon from "@material-ui/icons/Close";
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
-import Icon from "@material-ui/core/Icon";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
 import { teal, grey } from "@material-ui/core/colors";
+import {
+  FacebookLoginButton,
+  GoogleLoginButton,
+  TwitterLoginButton,
+} from "react-social-login-buttons";
 
 const styles = () => ({
   root: {
@@ -27,158 +31,78 @@ const styles = () => ({
     padding: 0,
   },
   mainHeader: {
-    backgroundColor: grey[100],
-    padding: 20,
+    backgroundColor: grey[0],
+    padding: 10,
     alignItems: "center",
   },
   mainContent: {
-    padding: 40,
+    padding: 30,
   },
   secondaryContainer: {
     padding: "20px 25px",
     backgroundColor: grey[200],
   },
+  marginTop: {
+    margin: "20px 0 0 6px",
+  },
+  bottomMargin: {
+    margin: "0 0 5px 0",
+  },
 });
-const countries = [
-  {
-    value: "USA",
-    label: "USA",
-  },
-  {
-    value: "EUR",
-    label: "EUR",
-  },
-  {
-    value: "BTC",
-    label: "BTC",
-  },
-  {
-    value: "JPY",
-    label: "JPY",
-  },
-];
 
 function LoginModal(props) {
-  const { classes, close } = props;
-  const [open, setOpen] = React.useState(true);
-  const [values, setValues] = React.useState({
-    shipping: "Cat in the Hat",
-    country: "",
-    city: "",
-    state: "",
-    postalCode: "",
-    address: "",
-  });
-  console.log(close, setValues);
+  const { classes } = props;
 
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
   return (
     <>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open form dialog
-      </Button>
       <Dialog
         className={classes.root}
         fullWidth
         maxWidth="md"
-        open={open}
-        onClose={handleClose}
+        open={props.open}
+        onClose={props.handleClose}
       >
         <DialogContent className={classes.padding}>
           <Grid container>
             <Grid item xs={8}>
               <Grid container direction="row" className={classes.mainHeader}>
-                <Grid item xs={8}>
+                <Grid item xs={12} className={classes.secondaryContainer}>
                   <Typography className={classes.primaryColor} variant="h5">
-                    Ship To My Address
-                  </Typography>
-                </Grid>
-                <Grid item xs={4}>
-                  <Typography
-                    className={classes.secondaryColor}
-                    variant="subtitle1"
-                    align="right"
-                  >
-                    Buyer Shipping Info
+                    Login
                   </Typography>
                 </Grid>
               </Grid>
               <Grid
+                style={{ alignItems: "center" }}
                 container
                 direction="row"
                 className={classes.mainContent}
                 spacing={1}
               >
-                <Grid item xs={10}>
-                  <TextField
-                    style={{ marginBottom: 20 }}
-                    fullWidth
-                    select
-                    margin="dense"
-                    variant="outlined"
-                    label="Shipping Presets"
-                    defaultValue="None"
-                    id="shipping-presets"
-                  >
-                    <MenuItem>None Present</MenuItem>
-                  </TextField>
+                <Grid item xs={12}>
+                  <Divider />
+                </Grid>
+                <Grid xs={12} spacing={1}>
+                  <Grid xs={12} spacing={1} className={classes.marginTop}>
+                    <FacebookLoginButton />
+                  </Grid>
+                  <Grid xs={12} spacing={1} className={classes.marginTop}>
+                    <TwitterLoginButton />
+                  </Grid>
+                  <Grid xs={12} spacing={1} className={classes.marginTop}>
+                    <GoogleLoginButton />
+                  </Grid>
                 </Grid>
                 <Grid item xs={12}>
                   <Divider />
                 </Grid>
-                <Grid item xs={10}>
-                  <TextField
-                    style={{ marginTop: 20 }}
-                    label="Country"
-                    fullWidth
-                    select
-                    variant="outlined"
-                    value={values.country}
-                    id="country"
-                    margin="dense"
-                    helperText="Please select your country"
-                  >
-                    {countries.map((option) => (
-                      <MenuItem key={option.value} value={option.value}>
-                        {option.label}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </Grid>
-                <Grid item xs={7}>
-                  <TextField
-                    fullWidth
-                    margin="dense"
-                    variant="outlined"
-                    label="City"
-                    id="city"
-                  />
-                </Grid>
-                <Grid item xs={7}>
-                  <TextField
-                    fullWidth
-                    margin="dense"
-                    variant="outlined"
-                    label="State/Province"
-                    id="state-province"
-                  />
-                </Grid>
                 <Grid item xs={12}>
                   <TextField
-                    //fullWidth
+                    fullWidth
                     margin="dense"
                     variant="outlined"
-                    label="Postal Code"
-                    id="postal-code"
+                    label="Email"
+                    id="email"
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -186,21 +110,18 @@ function LoginModal(props) {
                     fullWidth
                     margin="dense"
                     variant="outlined"
-                    label="Street Address"
-                    id="address"
+                    label="Password"
+                    id="password"
                   />
                 </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    fullWidth
-                    margin="dense"
-                    multiline
-                    rows="5"
-                    variant="outlined"
-                    label="Additional Info"
-                    id="additional-info"
-                  />
-                </Grid>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                  className={classes.marginTop}
+                >
+                  Submit
+                </Button>
               </Grid>
             </Grid>
             <Grid item xs={4} className={classes.secondaryContainer}>
@@ -212,60 +133,19 @@ function LoginModal(props) {
                     color="inherit"
                     aria-label="Close"
                     style={{ padding: 8 }}
-                    //className={classes.padding}
+                    className={classes.padding}
                   >
-                    <CloseIcon />
+                    <CloseIcon onClick={props.handleClose} />
                   </IconButton>
-                </Grid>
-                <Grid item xs={12} align="center">
-                  <Typography className={classes.primaryColor} variant="h5">
-                    Seller Shipping From
-                  </Typography>
-                </Grid>
-                <Grid container style={{ paddingTop: 20 }}>
-                  <Grid item xs={2}>
-                    <Icon className={classes.primaryColor}>location_on</Icon>
-                  </Grid>
-                  <Grid item xs={10}>
-                    <Typography className={classes.secondaryColor}>
-                      36 BAOSHAN JIUCUN BAOSHAN DISTRICT{" "}
-                      <strong>201900 Shanghai China</strong>
-                    </Typography>
-                  </Grid>
                 </Grid>
                 <Grid
                   container
                   style={{ paddingTop: 10, alignItems: "center" }}
-                >
-                  <Grid item xs={2}>
-                    <Icon className={classes.primaryColor}>person</Icon>
-                  </Grid>
-                  <Grid item align="left" xs={3}>
-                    <Typography
-                      variant="caption"
-                      className={classes.secondaryColor}
-                    >
-                      Seller
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={7}>
-                    <Typography
-                      align="right"
-                      className={classes.secondaryColor}
-                    >
-                      <strong>Seller Company</strong>
-                    </Typography>
-                  </Grid>
-                </Grid>
+                ></Grid>
               </Grid>
               <Grid container className="mt-auto">
                 <Grid item container ju>
-                  <Grid item xs={12}>
-                    <Button>Cancel</Button>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Button>SAVE</Button>
-                  </Grid>
+                  SOME CONTENT HERE
                 </Grid>
               </Grid>
             </Grid>
