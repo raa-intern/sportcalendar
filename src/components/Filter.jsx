@@ -1,16 +1,31 @@
 import React, { useState } from "react";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { createStyles, makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    wrap: {
+      width: "100%",
+      display: "flex",
+      justifyContent: "space-around",
+      marginTop: "30px",
+      marginBottom: "30px",
+    },
+  })
+);
 
 export default function Filter() {
   const [eventType, setEventType] = useState("");
   //   const [eventDate, setEventDate] = useState("");
   //   const [eventLocation, setEventLocation] = useState("");
+  const classes = useStyles();
 
   const handleChange = (event) => {
     setEventType(event.target.value);
   };
+
   return (
-    <>
+    <div className={classes.wrap}>
       <FormControl sx={{ m: 1, minWidth: 250 }}>
         <InputLabel id="event-type">Event Type</InputLabel>
         <Select
@@ -53,6 +68,6 @@ export default function Filter() {
           <MenuItem value={30}>Веслування</MenuItem>
         </Select>
       </FormControl>
-    </>
+    </div>
   );
 }

@@ -12,11 +12,35 @@ import RoomIcon from "@mui/icons-material/Room";
 import StarIcon from "@mui/icons-material/Star";
 import image from "../assets/images/image.jpg";
 import { NavLink } from "react-router-dom";
+import { createStyles, makeStyles } from "@mui/styles";
 
-export default function EventCard() {
+const useStyles = makeStyles(() =>
+  createStyles({
+    name: {
+      fontWeight: "500",
+    },
+  })
+);
+
+export default function EventCard({ event }) {
+  const {
+    // id,
+    name,
+    // type,
+    // category,
+    description,
+    location,
+    registration_date,
+    start_date,
+    // finish_date,
+    // tags,
+  } = event;
+
+  const classes = useStyles();
+
   return (
     <>
-      <Card sx={{ display: "flex" }}>
+      <Card sx={{ display: "flex", mb: "20px" }}>
         <Grid container>
           <Grid item xs={3}>
             <CardMedia
@@ -30,14 +54,14 @@ export default function EventCard() {
             <CardContent>
               <Grid container>
                 <Grid item xs={8}>
-                  <Typography>Змагання</Typography>
-                  <Typography>Опис змагання</Typography>
-                  <Typography>Реєстрація до 10 липня 2019</Typography>
-                  <Typography>Дата початку 16 липня 2019 о 12:00</Typography>
+                  <Typography className={classes.name}>{name}</Typography>
+                  <Typography>{description}</Typography>
+                  <Typography>Реєстрація {registration_date}</Typography>
+                  <Typography>Дата початку {start_date}</Typography>
                 </Grid>
                 <Grid item xs={4}>
                   <Typography>
-                    <RoomIcon /> Адреса
+                    <RoomIcon /> {location}
                   </Typography>
                 </Grid>
               </Grid>
