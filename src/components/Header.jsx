@@ -25,7 +25,7 @@ export default function ButtonAppBar() {
     <Box>
       <SecondHeader />
       <AppBar position="static">
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Toolbar sx={{ justifyContent: "space-between", width: "100%" }}>
           <Typography variant="h6" component="div" sx={{ ml: 2 }}>
             Sport Calendar
           </Typography>

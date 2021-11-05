@@ -11,7 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 .css-1y9n3ry-MuiPaper-root-MuiAppBar-root {
-  background-color: #3f51b5 !important;
-  color: white !important;
+  flex-direction: row !important;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }

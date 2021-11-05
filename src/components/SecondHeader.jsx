@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   AppBar,
   Stack,
@@ -43,6 +44,7 @@ const useStyles = makeStyles((theme) =>
     },
 
     donation: {
+      textDecoration: "none",
       textTransform: "uppercase",
       fontSize: "14px",
       marginRight: "24px",
@@ -56,7 +58,7 @@ export default function SecondHeader() {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" className={classes.appBar}>
+    <AppBar className={classes.appBar} position="static">
       <Stack direction="row" className={classes.socialIcons}>
         <IconButton aria-label="facebook">
           <FacebookIcon />
@@ -72,9 +74,9 @@ export default function SecondHeader() {
         </Link>
       </Stack>
 
-      <Link href="#" underline="none" className={classes.donation}>
+      <NavLink to="/events" className={classes.donation}>
         Допомогти проекту
-      </Link>
+      </NavLink>
 
       <ToggleButtonGroup
         size="small"
