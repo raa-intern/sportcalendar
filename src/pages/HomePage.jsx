@@ -1,16 +1,16 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import EventCard from "../components/EventCard";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import EventCard from "../components/EventCard/EventCard";
 import Filter from "../components/Filter";
-import { Container } from "@mui/material";
+import Container from "../components/Container/Container";
 import events from "../db/db.json";
-console.log(events);
+
 export default function HomePage() {
   return (
     <>
       <Header />
-      <Container maxWidth="xl">
+      <Container>
         <Filter />
         {events && (
           <ul>
