@@ -1,30 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material";
-
+import "modern-normalize/modern-normalize.css";
 import "./index.css";
-import App from "./App";
-
-const theme = createTheme({
-  palette: {
-    type: "light",
-    primary: {
-      main: "#3f51b5",
-      //1A1A47
-    },
-    secondary: {
-      main: "#f50057",
-    },
-  },
-});
+import App from "./App.jsx";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

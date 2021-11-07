@@ -7,8 +7,7 @@ const useStyles = makeStyles(() =>
     wrap: {
       width: "100%",
       display: "flex",
-      justifyContent: "space-around",
-      marginTop: "30px",
+      justifyContent: "space-between",
       marginBottom: "30px",
     },
   })
@@ -26,7 +25,7 @@ export default function Filter() {
 
   return (
     <div className={classes.wrap}>
-      <FormControl sx={{ m: 1, minWidth: 250 }}>
+      <FormControl sx={{ m: 1, width: "100%" }}>
         <InputLabel id="event-type">Event Type</InputLabel>
         <Select
           labelId="event-type"
@@ -40,7 +39,7 @@ export default function Filter() {
           <MenuItem value={30}>Веслування</MenuItem>
         </Select>
       </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 250 }}>
+      <FormControl sx={{ m: 1, width: "100%" }}>
         <InputLabel id="event-date">Event Date</InputLabel>
         <Select
           labelId="event-date"
@@ -54,7 +53,7 @@ export default function Filter() {
           <MenuItem value={30}>Веслування</MenuItem>
         </Select>
       </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 250 }}>
+      <FormControl sx={{ m: 1, width: "100%" }}>
         <InputLabel id="event-location">Event Location</InputLabel>
         <Select
           labelId="event-location"
