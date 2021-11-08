@@ -82,14 +82,14 @@ function LoginModal(props) {
                 <Grid item xs={12}>
                   <Divider />
                 </Grid>
-                <Grid xs={12} spacing={1}>
-                  <Grid xs={12} spacing={1} className={classes.marginTop}>
+                <Grid item xs={12}>
+                  <Grid item xs={12} className={classes.marginTop}>
                     <FacebookLoginButton />
                   </Grid>
-                  <Grid xs={12} spacing={1} className={classes.marginTop}>
+                  <Grid item xs={12} className={classes.marginTop}>
                     <TwitterLoginButton />
                   </Grid>
-                  <Grid xs={12} spacing={1} className={classes.marginTop}>
+                  <Grid item xs={12} className={classes.marginTop}>
                     <GoogleLoginButton />
                   </Grid>
                 </Grid>
@@ -134,8 +134,9 @@ function LoginModal(props) {
                     aria-label="Close"
                     style={{ padding: 8 }}
                     className={classes.padding}
+                    onClick={props.handleClose}
                   >
-                    <CloseIcon onClick={props.handleClose} />
+                    <CloseIcon />
                   </IconButton>
                 </Grid>
                 <Grid
@@ -144,7 +145,7 @@ function LoginModal(props) {
                 ></Grid>
               </Grid>
               <Grid container className="mt-auto">
-                <Grid item container ju>
+                <Grid item container>
                   SOME CONTENT HERE
                 </Grid>
               </Grid>
