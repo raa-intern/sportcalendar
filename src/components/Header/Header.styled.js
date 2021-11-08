@@ -45,4 +45,8 @@ export const Button = styled.button`
   border: 1px var(--white-color);
   border-radius: 5px;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 `;

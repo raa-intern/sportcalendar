@@ -2,7 +2,7 @@ import * as React from "react";
 import CardMedia from "@mui/material/CardMedia";
 import { Grid, Card, CardContent } from "@mui/material";
 import RoomIcon from "@mui/icons-material/Room";
-import image from "../../assets/images/image.jpg";
+import image from "../../assets/images/image.png";
 import {
   Title,
   NavLinkStyled,
@@ -44,7 +44,7 @@ export default function EventCard({ event }) {
                   <Title>{name}</Title>
                   <Discr>{description}</Discr>
                   <Discr>Реєстрація {registration_date}</Discr>
-                  <Discr>Дата початку {start_date}</Discr>
+                  <Discr>Дата початку {start_date || registration_date}</Discr>
                 </Grid>
                 <Grid item xs={4}>
                   <LocationWrap>
