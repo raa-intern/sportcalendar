@@ -1,14 +1,16 @@
 import { useState } from "react";
+import Container from "../Container/Container";
 import SecondHeader from "../SecondHeader/SecondHeader";
 import LoginModal from "../LoginModal";
+import { GiHamburgerMenu } from "react-icons/gi";
 import {
   NavList,
+  NavListMobile,
   NavListItem,
   LogoLink,
   MainНeader,
   Button,
 } from "./Header.styled";
-import Container from "../Container/Container";
 
 function Нeader() {
   const [open, setOpen] = useState(false);
@@ -18,9 +20,14 @@ function Нeader() {
     <MainНeader>
       <Container>
         <SecondHeader />
+        <NavListMobile>
+          <LogoLink href="/">Sport Calendar</LogoLink>
+          <Button>
+            <GiHamburgerMenu />
+          </Button>
+        </NavListMobile>
         <NavList>
           <LogoLink href="/">Sport Calendar</LogoLink>
-
           <NavListItem to="/events" activeStyle={{ color: "#00b6e0" }}>
             Події
           </NavListItem>

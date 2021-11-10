@@ -10,7 +10,7 @@ export default function ToogleButton({ buttons, onClick }) {
   };
 
   return (
-    <div>
+    <div className={s.buttonWrap}>
       {buttons.map((buttonLabel, i) => (
         <button
           key={i}
