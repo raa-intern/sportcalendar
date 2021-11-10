@@ -1,28 +1,61 @@
-.customButton {
-  width: 40px;
-  letter-spacing: 0.5px;
-  background-color: transparent;
-  color: var(--base-color);
-  font-size: 12px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  cursor: pointer;
+@media screen and (min-width: 768px) {
+  .customButton {
+    width: 30px;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    color: var(--base-color);
+    font-size: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .customButton:focus,
+  .customButton:hover {
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  .active {
+    width: 30px;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    color: var(--accent-color);
+    font-size: 10px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
-.customButton:focus,
-.customButton:hover {
-  color: var(--accent-color);
-  font-weight: 900;
-}
+@media screen and (min-width: 1280px) {
+  .customButton {
+    width: 40px;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    color: var(--base-color);
+    font-size: 12px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-.active {
-  width: 40px;
-  letter-spacing: 0.5px;
-  background-color: transparent;
-  color: var(--accent-color);
-  font-size: 14px;
-  font-weight: 900;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  cursor: pointer;
+  .customButton:focus,
+  .customButton:hover {
+    color: var(--accent-color);
+    font-weight: 900;
+  }
+
+  .active {
+    width: 40px;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 900;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

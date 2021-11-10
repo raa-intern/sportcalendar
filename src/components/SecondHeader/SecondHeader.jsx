@@ -1,4 +1,9 @@
 import React from "react";
+import { BsFacebook } from "react-icons/bs";
+import { FaTelegramPlane } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+import { MdPhoneIphone } from "react-icons/md";
+import ToogleButton from "../ToogleButton/ToogleButton";
 import {
   AppBar,
   Wrap,
@@ -6,11 +11,6 @@ import {
   NavLinkStyled,
   ContactLink,
 } from "./SecondHeader.styled";
-import { BsFacebook } from "react-icons/bs";
-import { FaTelegramPlane } from "react-icons/fa";
-import { GrInstagram } from "react-icons/gr";
-import { MdPhoneIphone } from "react-icons/md";
-import ToogleButton from "../ToogleButton/ToogleButton";
 
 export default function SecondHeader() {
   const changeLang = (event) => {
