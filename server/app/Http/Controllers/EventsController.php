@@ -14,11 +14,9 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $expenses = Expense::all();
+        $expenses = ExpenseModel::all();
         return response()->json($expenses);
     }
-
-   
 
     /**
      * Store a newly created resource in storage.
@@ -29,11 +27,11 @@ class EventsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'type' => 'required',
-            'description' => 'required' //optional if you want this to be required
+            'event_name' => 'required',
+            'event_type' => 'required',
+            'event_description' => 'required' //optional if you want this to be required
         ]);
-        $expense = Expense::create($request->all());
+        $expense = ExpenseModel::create($request->all());
         return response()->json(['message'=> 'expense created', 
         'expense' => $expense]);
     }
@@ -41,10 +39,10 @@ class EventsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Expense  $expense
+     * @param  \App\ExpenseModel  $expense
      * @return \Illuminate\Http\Response
      */
-    public function show(Expense $expense)
+    public function show(ExpenseModel $expense)
     {
         return $expense;
     }
@@ -52,7 +50,7 @@ class EventsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Expense  $expense
+     * @param  \App\ExpenseModel  $expense
      * @return \Illuminate\Http\Response
      */
 
@@ -60,20 +58,20 @@ class EventsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Expense  $expense
+     * @param  \App\ExpenseModel  $expense
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Expense $expense)
+    public function update(Request $request, ExpenseModel $expense)
     {
         $request->validate([
-            'name' => 'required',
-            'amount' => 'required',
-            'description' => 'required' //optional if you want this to be required
+            'event_name' => 'required',
+            'event_type' => 'required',
+            'event_description' => 'required' //optional if you want this to be required
         ]);
        $expense->update($request->all());
         
         return response()->json([
-            'message' => 'expense updated!',
+            'message' => 'Подію відредаговано!',
             'expense' => $expense
         ]);
     }
@@ -84,11 +82,11 @@ class EventsController extends Controller
      * @param  \App\Expense  $expense
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Expense $expense)
+    public function destroy(ExpenseModel $expense)
     {
         $expense->delete();
         return response()->json([
-            'message' => 'expense deleted'
+            'message' => 'Подію видалено!'
         ]);
         
     }
