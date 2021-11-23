@@ -14,31 +14,31 @@ class CreateEventsTable extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->id()->primaryKey();
-            $table->string('name');
-            $table->string('description');
-            $table->string('image_intro');
-            $table->string('image_full');
+            $table->increments('id');
+            $table->string('event_name');
+            $table->string('event_type', 45);
+            $table->integer('category_id');
+            $table->text('event_description')->nullable();
+            $table->string('city');
+            $table->string('street');
+            $table->string('build_number')->nullable();
+            $table->string('geo_point')->nullable();
+            $table->dateTime('registration_date');
+            $table->dateTime('start_date');
+            $table->dateTime('finish_date');
+            $table->string('event_link');
+            $table->string('event_status');
+            $table->string('image_intro', 45);
+            $table->string('image_full', 45);
             $table->string('alt_intro')->nullable();
             $table->string('alt_full')->nullable();
             $table->string('meta_title');
             $table->string('meta_desc');
             $table->integer('rating');
-            $table->string('event_status');
             $table->string('url');
-            $table->string('sourse');
-            $table->integer('category_id');
-            $table->string('geo_point');
-            $table->string('city');
-            $table->string('street');
-            $table->string('build_number');
-            $table->datetime('start_date');
-            $table->datetime('finish_date');
-            $table->string('event_link');
-            $table->string('registration_date');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
-            $table->timestamps();
+            $table->string('event_sourse')->nullable();   
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
         });
     }
 

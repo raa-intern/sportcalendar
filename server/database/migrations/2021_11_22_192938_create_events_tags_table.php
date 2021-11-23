@@ -14,7 +14,9 @@ class CreateEventsTagsTable extends Migration
     public function up()
     {
         Schema::create('events_tags', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('tags_name');
+            $table->string('tags_url');
             $table->timestamps();
         });
     }
