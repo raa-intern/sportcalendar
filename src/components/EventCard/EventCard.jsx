@@ -1,14 +1,20 @@
 import * as React from "react";
-import CardMedia from "@mui/material/CardMedia";
-import { Grid, Card, CardContent } from "@mui/material";
+// import CardMedia from "@mui/material/CardMedia";
+import { Card } from "@mui/material";
 import RoomIcon from "@mui/icons-material/Room";
+import { ImShare2 } from "react-icons/im";
+import { FiHeart } from "react-icons/fi";
+import { GoCalendar } from "react-icons/go";
 import image from "../../assets/images/image.png";
 import {
   Title,
-  NavLinkStyled,
   Discr,
-  LocationWrap,
-  Wrap,
+  P,
+  ButtonWrap,
+  Button,
+  CardContainer,
+  Image,
+  CardContent,
 } from "./EventCard.styled";
 
 export default function EventCard({ event }) {
@@ -20,7 +26,7 @@ export default function EventCard({ event }) {
     description,
     location,
     registration_date,
-    start_date,
+    // start_date,
     // finish_date,
     // tags,
   } = event;
@@ -28,39 +34,37 @@ export default function EventCard({ event }) {
   return (
     <>
       <Card sx={{ display: "flex", mb: "20px" }}>
-        <Grid container>
-          <Grid item xs={3}>
-            <CardMedia
-              component="img"
-              height="100%"
-              image={image}
-              alt="maraphon"
-            />
-          </Grid>
-          <Grid item xs={7}>
+        <CardContainer>
+          <div>
+            <Image src={image} alt="maraphon" />
+          </div>
+          <div>
             <CardContent>
-              <Grid container>
-                <Grid item xs={8}>
-                  <Title>{name}</Title>
-                  <Discr>{description}</Discr>
-                  <Discr>Реєстрація {registration_date}</Discr>
-                  <Discr>Дата початку {start_date || registration_date}</Discr>
-                </Grid>
-                <Grid item xs={4}>
-                  <LocationWrap>
-                    <RoomIcon /> <p>{location}</p>
-                  </LocationWrap>
-                </Grid>
-              </Grid>
+              <div>
+                <P>
+                  <GoCalendar size={22} />
+                  {registration_date}
+                </P>
+                <P>
+                  <RoomIcon />
+                  {location}
+                </P>
+              </div>
+              <Title>{name}</Title>
+              <Discr>{description}</Discr>
             </CardContent>
-          </Grid>
-          <Grid item xs={2}>
-            <Wrap>
-              <NavLinkStyled to="/event/:eventId">Відкрити подію</NavLinkStyled>
-              <NavLinkStyled to="/event/:eventId">Зберегти</NavLinkStyled>
-            </Wrap>
-          </Grid>
-        </Grid>
+          </div>
+          <ButtonWrap>
+            <Button>
+              <FiHeart />
+              Зберегти
+            </Button>
+            <Button>
+              <ImShare2 />
+              Подiлитися
+            </Button>
+          </ButtonWrap>
+        </CardContainer>
       </Card>
     </>
   );
