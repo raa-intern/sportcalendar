@@ -66,6 +66,10 @@ export const P = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
 `;
 
 export const ButtonWrap = styled.div`
