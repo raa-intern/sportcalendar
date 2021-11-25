@@ -2,14 +2,11 @@ import * as React from "react";
 import CardMedia from "@mui/material/CardMedia";
 import { Grid, Card, CardContent } from "@mui/material";
 import RoomIcon from "@mui/icons-material/Room";
+import { ImShare2 } from "react-icons/im";
+import { FiHeart } from "react-icons/fi";
+import { GoCalendar } from "react-icons/go";
 import image from "../../assets/images/image.png";
-import {
-  Title,
-  NavLinkStyled,
-  Discr,
-  LocationWrap,
-  Wrap,
-} from "./EventCard.styled";
+import { Title, Discr, IconWrap, Wrap, Button } from "./EventCard.styled";
 
 export default function EventCard({ event }) {
   const {
@@ -20,7 +17,7 @@ export default function EventCard({ event }) {
     description,
     location,
     registration_date,
-    start_date,
+    // start_date,
     // finish_date,
     // tags,
   } = event;
@@ -41,23 +38,37 @@ export default function EventCard({ event }) {
             <CardContent>
               <Grid container>
                 <Grid item xs={8}>
-                  <Title>{name}</Title>
-                  <Discr>{description}</Discr>
-                  <Discr>Реєстрація {registration_date}</Discr>
-                  <Discr>Дата початку {start_date || registration_date}</Discr>
-                </Grid>
-                <Grid item xs={4}>
-                  <LocationWrap>
+                  <IconWrap>
+                    <GoCalendar size={18} />
+                    <p>{registration_date}</p>
+                  </IconWrap>
+                  <IconWrap>
                     <RoomIcon /> <p>{location}</p>
-                  </LocationWrap>
+                  </IconWrap>
                 </Grid>
+                <Title>{name}</Title>
+                <Discr>{description}</Discr>
               </Grid>
             </CardContent>
           </Grid>
-          <Grid item xs={2}>
+          <Grid
+            item
+            xs={2}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Wrap>
-              <NavLinkStyled to="/event/:eventId">Відкрити подію</NavLinkStyled>
-              <NavLinkStyled to="/event/:eventId">Зберегти</NavLinkStyled>
+              <Button>
+                <FiHeart />
+                Зберегти
+              </Button>
+              <Button>
+                <ImShare2 />
+                Подiлитися
+              </Button>
             </Wrap>
           </Grid>
         </Grid>

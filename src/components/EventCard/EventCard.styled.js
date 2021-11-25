@@ -1,5 +1,4 @@
 import styled from "@emotion/styled/macro";
-import { NavLink } from "react-router-dom";
 
 export const Title = styled.h1`
   font-size: 16px;
@@ -9,37 +8,45 @@ export const Title = styled.h1`
 `;
 
 export const Discr = styled.p`
+  display: flex;
+  align-items: center;
   font-size: 14px;
   margin-bottom: 10px;
 `;
 
-export const LocationWrap = styled.div`
+export const IconWrap = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   & > svg {
     color: var(--accent-color);
+    margin-right: 10px;
   }
 `;
 
 export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+
   margin-top: 15px;
   margin-right: 15px;
 `;
 
-export const NavLinkStyled = styled(NavLink)`
+export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--accent-color);
-  border-radius: 15px;
-  color: var(--accent-color);
-  padding: 10px 8px;
+  border: none;
+  color: var(--black-color);
+  background-color: transparent;
   margin-bottom: 15px;
   &:focus,
   &:hover {
-    background-color: var(--accent-color);
-    color: var(--white-color);
+    color: var(--accent-color);
+  }
+
+  & > svg {
+    margin-right: 15px;
   }
 `;
