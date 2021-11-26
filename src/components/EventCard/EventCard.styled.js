@@ -2,6 +2,7 @@ import styled from "@emotion/styled/macro";
 
 export const CardContainer = styled.div`
   @media screen and (min-width: 768px) {
+    width: 100%;
     display: flex;
   }
 `;
@@ -78,6 +79,7 @@ export const ButtonWrap = styled.div`
   justify-content: space-around;
 
   @media screen and (min-width: 768px) {
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     margin-top: 15px;

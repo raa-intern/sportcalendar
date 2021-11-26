@@ -15,24 +15,27 @@ const useStyles = makeStyles(() =>
 
 export default function Filter() {
   const [eventType, setEventType] = useState("");
-  //   const [eventDate, setEventDate] = useState("");
-  //   const [eventLocation, setEventLocation] = useState("");
+  const [eventDate, setEventDate] = useState("");
+  const [eventLocation, setEventLocation] = useState("");
   const classes = useStyles();
 
-  const handleChange = (event) => {
-    setEventType(event.target.value);
+  const handleChange = (event, filterType) => {
+    console.log(filterType);
+    filterType === "category" && setEventType(event.target.value);
+    filterType === "date" && setEventDate(event.target.value);
+    filterType === "location" && setEventLocation(event.target.value);
   };
 
   return (
     <div className={classes.wrap}>
       <FormControl sx={{ m: 1, width: "100%" }}>
-        <InputLabel id="event-type">Event Type</InputLabel>
+        <InputLabel id="event-type">Категорiя</InputLabel>
         <Select
           labelId="event-type"
           id="event-type"
           value={eventType}
           label="Event Type"
-          onChange={handleChange}
+          onChange={(e) => handleChange(e, "category")}
         >
           <MenuItem value={10}>Бiг</MenuItem>
           <MenuItem value={20}>Велоспорт</MenuItem>
@@ -40,31 +43,31 @@ export default function Filter() {
         </Select>
       </FormControl>
       <FormControl sx={{ m: 1, width: "100%" }}>
-        <InputLabel id="event-date">Event Date</InputLabel>
+        <InputLabel id="event-date">Дата проведення</InputLabel>
         <Select
           labelId="event-date"
           id="event-date"
-          value={eventType}
+          value={eventDate}
           label="Event Date"
-          onChange={handleChange}
+          onChange={(e) => handleChange(e, "date")}
         >
-          <MenuItem value={10}>Бiг</MenuItem>
-          <MenuItem value={20}>Велоспорт</MenuItem>
-          <MenuItem value={30}>Веслування</MenuItem>
+          <MenuItem value={10}>Жовтень</MenuItem>
+          <MenuItem value={20}>Листопад</MenuItem>
+          <MenuItem value={30}>Грудень</MenuItem>
         </Select>
       </FormControl>
       <FormControl sx={{ m: 1, width: "100%" }}>
-        <InputLabel id="event-location">Event Location</InputLabel>
+        <InputLabel id="event-location">Місце проведення</InputLabel>
         <Select
           labelId="event-location"
           id="event-location"
-          value={eventType}
+          value={eventLocation}
           label="Event Location"
-          onChange={handleChange}
+          onChange={(e) => handleChange(e, "location")}
         >
-          <MenuItem value={10}>Бiг</MenuItem>
-          <MenuItem value={20}>Велоспорт</MenuItem>
-          <MenuItem value={30}>Веслування</MenuItem>
+          <MenuItem value={10}>Київ</MenuItem>
+          <MenuItem value={20}>Львів</MenuItem>
+          <MenuItem value={30}>Житомир</MenuItem>
         </Select>
       </FormControl>
     </div>
