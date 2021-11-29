@@ -1,4 +1,4 @@
-import { MainFooter } from "./Footer.styled.js";
+import { MainFooter, Text } from "./Footer.styled.js";
 import Container from "../Container/Container";
 
 function Footer() {
@@ -8,9 +8,7 @@ function Footer() {
         {/* <div>
           <div>
             <div>
-              <a>
-                Sport Calendar
-              </a>
+              <a>Sport Calendar</a>
               <address>
                 <p>г. Киев, пр-т Леси Украинки, 26</p>
                 <a href="mailto:info@example.com">info@example.com</a>
@@ -19,6 +17,7 @@ function Footer() {
             </div>
           </div>
         </div> */}
+        <Text> &#64; Всі права захищені, 2021р</Text>
       </Container>
     </MainFooter>
   );
