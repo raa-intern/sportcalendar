@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Container from "../Container/Container";
 import SecondHeader from "../SecondHeader/SecondHeader";
-import LoginModal from "../LoginModal";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Modal from "../Modal/Modal";
+// import LoginModal from "../LoginModal";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaUserCircle } from "react-icons/fa";
 import {
   NavList,
   NavListMobile,
@@ -11,26 +14,42 @@ import {
   MainНeader,
   Button,
 } from "./Header.styled";
+import LoginForm from "../LoginForm/LoginForm";
 
 function Нeader() {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [isMobileMenu, setIsMobileMenu] = useState(false);
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggleOnClick = () => {
+    isMobileMenu && setIsMobileMenu(false);
+    setToggle(!toggle);
+  };
+
+  const handleOnMenuBtnClick = () => {
+    setIsMobileMenu(true);
+    handleToggleOnClick();
+  };
+
   return (
     <MainНeader>
       <Container>
         <SecondHeader />
         <NavListMobile>
-          <LogoLink href="/">Sport Calendar</LogoLink>
-          <Button>
+          <Button onClick={handleOnMenuBtnClick}>
             <GiHamburgerMenu />
           </Button>
+          <LogoLink href="/">Sport Calendar</LogoLink>
+          <Button onClick={handleToggleOnClick}>
+            <FaUserCircle />
+          </Button>
+          {toggle && (
+            <Modal closeModal={handleToggleOnClick}>
+              {isMobileMenu ? <MobileMenu /> : <LoginForm />}
+            </Modal>
+          )}
         </NavListMobile>
         <NavList>
           <LogoLink href="/">Sport Calendar</LogoLink>
-          <NavListItem to="/events" activeStyle={{ color: "#00b6e0" }}>
-            Події
-          </NavListItem>
           <NavListItem to="/organizers" activeStyle={{ color: "#00b6e0" }}>
             Організаторам
           </NavListItem>
@@ -40,8 +59,8 @@ function Нeader() {
           <NavListItem to="/about" activeStyle={{ color: "#00b6e0" }}>
             Про нас
           </NavListItem>
-          <LoginModal handleClose={handleClose} open={open} />
-          <Button onClick={handleOpen}>Вхід | Реєстрація</Button>
+          {/* <LoginModal handleClose={handleToggleOnClick} open={toggle} /> */}
+          <Button /*onClick={handleToggleOnClick}*/>Вхід | Реєстрація</Button>
         </NavList>
       </Container>
     </MainНeader>

@@ -43,7 +43,7 @@ export default function Filter() {
         </Select>
       </FormControl>
       <FormControl sx={{ m: 1, width: "100%" }}>
-        <InputLabel id="event-date">Дата проведення</InputLabel>
+        <InputLabel id="event-date">Дата</InputLabel>
         <Select
           labelId="event-date"
           id="event-date"
@@ -57,7 +57,7 @@ export default function Filter() {
         </Select>
       </FormControl>
       <FormControl sx={{ m: 1, width: "100%" }}>
-        <InputLabel id="event-location">Місце проведення</InputLabel>
+        <InputLabel id="event-location">Місто</InputLabel>
         <Select
           labelId="event-location"
           id="event-location"

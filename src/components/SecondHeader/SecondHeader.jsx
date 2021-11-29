@@ -2,7 +2,8 @@ import React from "react";
 import { BsFacebook } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
-import { MdPhoneIphone } from "react-icons/md";
+import { FaPhoneSquareAlt } from "react-icons/fa";
+
 import ToogleButton from "../ToogleButton/ToogleButton";
 import {
   AppBar,
@@ -30,7 +31,7 @@ export default function SecondHeader() {
           <GrInstagram />
         </ContactLink>
         <ContactLink href="#">
-          <MdPhoneIphone />
+          <FaPhoneSquareAlt />
         </ContactLink>
       </Wrap>
 
