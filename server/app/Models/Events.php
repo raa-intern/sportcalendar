@@ -10,12 +10,13 @@ class Events extends Model
 {
     // use HasFactory;
 
-    public function getEvents() 
+    public function getEvents()
     {
         return DB::table('events')
             ->select(
-                "event_name", 
-                "event_type", 
+                "id",
+                "event_name",
+                "event_type",
                 "event_description",
                 "category_id",
                 "city",
@@ -44,8 +45,8 @@ class Events extends Model
     {
         return DB::table('events')
             ->select(
-                "event_name", 
-                "event_type", 
+                "event_name",
+                "event_type",
                 "event_description",
                 "category_id",
                 "city",
@@ -69,7 +70,7 @@ class Events extends Model
             )
             ->where(['events.id' => $id])
             ->first();
-            
+
     }
 
     public function addEvent($id)
@@ -78,6 +79,13 @@ class Events extends Model
 			->where(['id' => $id])
             ->update(['options->enabled' => true]);
 
+    }
+
+    public function deleteEvent($id)
+    {
+        $affected = DB::table('events')
+            ->where(['id' => $id])
+            ->delete();
     }
 
 

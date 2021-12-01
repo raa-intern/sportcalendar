@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ParserController;
@@ -28,14 +29,14 @@ use App\Http\Controllers\ParserController;
 	Route::get('/bells',                [AdminController::class, 'bells_list']);
     Route::get('/letters',              [AdminController::class, 'letters_list']);
     Route::get('/logmonitor',           [AdminController::class, 'logs_monitor']);
-    
+
     Route::get('/parsed/list',          [ParserController::class, 'parsed_list']);
-    
-    Route::get('/event/show/{id}',      [EventsController::class, 'event_show']);
+
+    Route::get('/event/show/{id}',      [EventsController::class, 'event_show']); // +
 	Route::post('/event/create/{id}',   [EventsController::class, 'event_create']);
 	Route::put('/event/edit/{id}',      [EventsController::class, 'event_edit']);
 	Route::any('/event/delete/{id}',    [EventsController::class, 'event_delete']);
 
-	
+
 
 

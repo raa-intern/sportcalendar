@@ -17,6 +17,15 @@ class EventsController extends Controller
             'event' => $event
         ]);
     }
+
+    public function event_delete($id)
+    {
+        $eventModel = new Events();
+        $event = $eventModel->deleteEvent($id);
+        return view('admin/eventdelete', [
+            'user' => 'admin'
+        ]);
+    }
 }
 
    /**
@@ -24,8 +33,9 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+/*
     public function event_create($id)
     {
         //
     }
+*/
