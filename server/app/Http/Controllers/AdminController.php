@@ -32,21 +32,64 @@ class AdminController extends Controller
         ]);
     }
 
-    public function event_show($id)
-    {
-        $eventModel = new Events();
-        $event = $eventModel->getEventByID($id);
-        return view('admin/event', [
-            'user' => 'admin',
-            'event' => $event
-        ]);
-    }
-
     public function charts_list()
     {
         return view('admin/charts', [
             'user' => 'admin']);
     }
+
+    public function widgets_list()
+    {
+        return view('admin/widgets', [
+            'user' => 'admin']);
+    }
+
+    public function users_list()
+    {
+        return view('admin/users', [
+            'user' => 'admin']);
+    }
+
+    public function organizer()
+    {
+        return view('admin/organizer', [
+            'user' => 'admin']);
+    }
+
+    public function dashboard2()
+    {
+        return view('admin/dashboard2', [
+            'user' => 'admin']);
+    }
+
+    public function bells_list()
+    {
+        return view('admin/bells', [
+            'user' => 'admin']);
+    }
+
+    public function letters_list()
+    {
+        return view('admin/letters', [
+            'user' => 'admin']);
+    }
+
+    public function logs_monitor()
+    {
+        return view('admin/logmonitor', [
+            'user' => 'admin']);
+    }
+
+    public function parsed_list()
+    {
+        return view('admin/parsed/list', [
+            'user' => 'admin']);
+    }
+
+
+
+
+
 
 
     /**
@@ -54,10 +97,7 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function event_create()
-    {
-        //
-    }
+    
 
     /**
      * Store a newly created resource in storage.
