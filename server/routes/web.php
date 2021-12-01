@@ -20,6 +20,7 @@ use App\Http\Controllers\ParserController;
 // Auth::routes();
     Route::get('/dashboard',            [AdminController::class, 'dashboard']);
     Route::get('/events',               [AdminController::class, 'events_list']);
+    Route::get('/parser',               [AdminController::class, 'parser_list']);
     Route::get('/charts',               [AdminController::class, 'charts_list']);
     Route::get('/widgets',              [AdminController::class, 'widgets_list']);
     Route::get('/users',                [AdminController::class, 'users_list']);
@@ -27,9 +28,7 @@ use App\Http\Controllers\ParserController;
 	Route::get('/dashboard2',           [AdminController::class, 'dashboard2']);
 	Route::get('/bells',                [AdminController::class, 'bells_list']);
     Route::get('/letters',              [AdminController::class, 'letters_list']);
-    Route::get('/logmonitor',           [AdminController::class, 'logs_monitor']);
-    
-    Route::get('/parsed/list',          [ParserController::class, 'parsed_list']);
+    Route::get('/logs',                 [AdminController::class, 'logs_monitor']);  
     
     Route::get('/event/show/{id}',      [EventsController::class, 'event_show']);
 	Route::post('/event/create/{id}',   [EventsController::class, 'event_create']);

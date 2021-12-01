@@ -266,31 +266,41 @@
                  <!-- Sidebar navigation-->
                  <nav class="sidebar-nav">
                      <ul id="sidebarnav" class="pt-4">
-                         <li class="sidebar-item">
-                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/dashboard" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Монітор</span></a>
-                         </li>
-                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/events" aria-expanded="false"><i class="mdi mdi-bike"></i><span class="hide-menu">Спортивні події</span></a>
-                         </li>
-                         <li class="sidebar-item">
-                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/charts" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Графіки</span></a>
-                         </li>
-                         <li class="sidebar-item">
-                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/widgets" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Віджети</span></a>
-                         </li>
-                         <li class="sidebar-item">
-                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/users" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Агенти/Користувачі</span></a>
-                         </li>
-                         <li class="sidebar-item">
-                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/organizer" aria-expanded="false"><i class="mdi mdi-email-outline"></i><span class="hide-menu">Органайзер</span></a>
-                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/dashboard" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Монітор</span></a>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/dashboard" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard-I</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/events" aria-expanded="false"><i class="mdi mdi-bike"></i><span class="hide-menu">Спортивні події</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/parser" aria-expanded="false"><i class="mdi mdi-arrange-bring-to-front"></i><span class="hide-menu">Роботи/парсери</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/charts" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Графіки</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/widgets" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Віджети</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/users" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Агенти/Користувачі</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/organizer" aria-expanded="false"><i class="mdi mdi-table-large"></i><span class="hide-menu">Органайзер</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/dashboard2" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard-II</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/bells" aria-expanded="false"><i class="mdi mdi-bell-ring"></i><span class="hide-menu">Повідомлення</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/letters" aria-expanded="false"><i class="mdi mdi-email-outline"></i><span class="hide-menu">Пошта</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/logs" aria-expanded="false"><i class="mdi mdi-database"></i><span class="hide-menu">Сервер</span></a>
+
                         </li>
 
-                         <li class="sidebar-item">
-                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/letters" aria-expanded="false"><i class="mdi mdi-email-outline"></i><span class="hide-menu">Листи</span></a>
-                         </li>
                          {{-- <li class="sidebar-item">
                              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Forms </span></a>
                              <ul aria-expanded="false" class="collapse first-level">
@@ -323,7 +333,7 @@
                              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i><span class="hide-menu">Addons </span></a> --}}
                              <ul aria-expanded="false" class="collapse first-level">
                                  <li class="sidebar-item">
-                                     <a href="index2.html" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> Dashboard-2 </span></a>
+                                     <a href="index2.html" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> Dashboard-3 </span></a>
                                  </li>
                                  <li class="sidebar-item">
                                      <a href="pages-gallery.html" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Gallery </span></a>
