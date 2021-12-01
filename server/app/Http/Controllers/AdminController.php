@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Users;
+use App\Models\Parser;
 use App\Models\Events;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -32,6 +34,16 @@ class AdminController extends Controller
         ]);
     }
 
+    public function parser_list()
+    {
+        $parsedModel = new Parser();
+        $parsed = $parsedModel->getParsedData();
+        return view('admin/parser', [
+            'user' => 'admin',
+            'users' => $parsed
+        ]);
+    }
+
     public function charts_list()
     {
         return view('admin/charts', [
@@ -46,8 +58,12 @@ class AdminController extends Controller
 
     public function users_list()
     {
+        $usersModel = new Users();
+        $users = $usersModel->getUsers();
         return view('admin/users', [
-            'user' => 'admin']);
+            'user' => 'admin',
+            'users' => $users
+        ]);
     }
 
     public function organizer()
@@ -76,21 +92,9 @@ class AdminController extends Controller
 
     public function logs_monitor()
     {
-        return view('admin/logmonitor', [
+        return view('admin/logs', [
             'user' => 'admin']);
     }
-
-    public function parsed_list()
-    {
-        return view('admin/parsed/list', [
-            'user' => 'admin']);
-    }
-
-
-
-
-
-
 
     /**
      * Show the form for creating a new resource.
