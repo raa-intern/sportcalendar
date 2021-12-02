@@ -10,9 +10,11 @@
      <!-- Favicon icon -->
      <link rel="icon" type="image/png" sizes="16x16" href="/admin/assets/images/favicon.png" />
      <!-- Custom CSS -->
-     <link href="/admin/assets/libs/flot/css/float-chart.css" rel="stylesheet" />
-     <!-- Custom CSS -->
+     <link href="/admin/assets/libs/flot/css/float-chart.css" rel="stylesheet" />   
+     <link href="/admin/assets/libs/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet" />
+     <link href="/admin/assets/extra-libs/calendar/calendar.css" rel="stylesheet" />
      <link href="/admin/dist/css/style.min.css" rel="stylesheet" />
+
      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
      <!--[if lt IE 9]>
@@ -420,16 +422,15 @@
      <!-- All Jquery -->
      <!-- ============================================================== -->
      <script src="/admin/assets/libs/jquery/dist/jquery.min.js"></script>
+     <script src="/admin/dist/js/jquery.ui.touch-punch-improved.js"></script>
+     <script src="/admin/dist/js/jquery-ui.min.js"></script>
      <!-- Bootstrap tether Core JavaScript -->
      <script src="/admin/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
+     <!-- slimscrollbar scrollbar JavaScript -->
      <script src="/admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-
      <script src="/admin/assets/extra-libs/sparkline/sparkline.js"></script>
-
      <!--Wave Effects -->
      <script src="/admin/dist/js/waves.js"></script>
-
      <!--Menu sidebar -->
      <script src="/admin/dist/js/sidebarmenu.js"></script>
 
@@ -438,6 +439,14 @@
 
      <!--This page JavaScript -->
      <!-- <script src="../dist/js/pages/dashboards/dashboard1.js"></script> -->
+     <!-- this page js -->
+     <script src="/admin/assets/libs/moment/min/moment.min.js"></script>
+
+     <script src="/admin/assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+
+     <script src="/admin/dist/js/pages/calendar/cal-init.js"></script>
+
+
      <!-- Charts js Files -->
      <script src="/admin/assets/libs/flot/excanvas.js"></script>
 

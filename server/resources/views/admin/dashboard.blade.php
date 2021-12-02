@@ -8,7 +8,7 @@
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-            <h4 class="page-title">Dashboard</h4>
+            <h4 class="page-title">Dashboard-I</h4>
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -42,7 +42,7 @@
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-view-dashboard"></i>
                      </h1>
-                     <h6 class="text-white">Dashboard</h6>
+                     <h6 class="text-white">Dashboard-II</h6>
                  </div>
              </div>
          </div>
@@ -53,7 +53,7 @@
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-chart-areaspline"></i>
                      </h1>
-                     <h6 class="text-white">Charts</h6>
+                     <h6 class="text-white">Графіки</h6>
                  </div>
              </div>
          </div>
@@ -64,7 +64,7 @@
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-collage"></i>
                      </h1>
-                     <h6 class="text-white">Widgets</h6>
+                     <h6 class="text-white">Віджети</h6>
                  </div>
              </div>
          </div>
@@ -75,7 +75,7 @@
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-border-outside"></i>
                      </h1>
-                     <h6 class="text-white">Tables</h6>
+                     <h6 class="text-white">Органайзер</h6>
                  </div>
              </div>
          </div>
@@ -86,7 +86,7 @@
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-arrow-all"></i>
                      </h1>
-                     <h6 class="text-white">Full Width</h6>
+                     <h6 class="text-white">Парсер</h6>
                  </div>
              </div>
          </div>
@@ -98,7 +98,7 @@
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-receipt"></i>
                      </h1>
-                     <h6 class="text-white">Forms</h6>
+                     <h6 class="text-white">Спортивні події</h6>
                  </div>
              </div>
          </div>
@@ -120,7 +120,7 @@
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-pencil"></i>
                      </h1>
-                     <h6 class="text-white">Elements</h6>
+                     <h6 class="text-white">Пошта</h6>
                  </div>
              </div>
          </div>
@@ -142,7 +142,7 @@
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-alert"></i>
                      </h1>
-                     <h6 class="text-white">Errors</h6>
+                     <h6 class="text-white">Сервер</h6>
                  </div>
              </div>
          </div>

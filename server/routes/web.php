@@ -15,7 +15,9 @@ use App\Http\Controllers\ParserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/',         [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/login',    [App\Http\Controllers\HomeController::class, 'login'])->name('login');
 // Route::get('/laravel', function () {return view('welcome');});
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Auth::routes();
@@ -29,20 +31,17 @@ use App\Http\Controllers\ParserController;
 	Route::get('/dashboard2',           [AdminController::class, 'dashboard2']);
 	Route::get('/bells',                [AdminController::class, 'bells_list']);
     Route::get('/letters',              [AdminController::class, 'letters_list']);
-<<<<<<< HEAD
     Route::get('/logs',                 [AdminController::class, 'logs_monitor']);  
-    
-    Route::get('/event/show/{id}',      [EventsController::class, 'event_show']);
-=======
-    Route::get('/logmonitor',           [AdminController::class, 'logs_monitor']);
-
-    Route::get('/parsed/list',          [ParserController::class, 'parsed_list']);
 
     Route::get('/event/show/{id}',      [EventsController::class, 'event_show']); // +
->>>>>>> c4ba354425263aa7b218dcc2c805f2f545014f4a
+
 	Route::post('/event/create/{id}',   [EventsController::class, 'event_create']);
 	Route::put('/event/edit/{id}',      [EventsController::class, 'event_edit']);
 	Route::any('/event/delete/{id}',    [EventsController::class, 'event_delete']);
+
+    Route::get('/user/show/{id}',       [UsersController::class, 'user_show']);
+    
+   
 
 
 
