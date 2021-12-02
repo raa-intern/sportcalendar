@@ -32,13 +32,35 @@
     <!-- ============================================================== -->
     <!-- Start Page Content -->
     <!-- ============================================================== -->
+    @if(isset($delete))
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    Видалення успішно виконано !
+                </div>
+            </div>
+        </div>
+    @endif
+    @if(isset($create))
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    Створення успішно виконано !
+                </div>
+            </div>
+        </div>
+    @endif
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <div>
                         <h5 class="card-title">Список подій <strong>Sportcalendar</strong></h5>
-                        <button type="button" class="btn btn-cyan btn-sm text-white">Додати подію!</button>
+                        <form action="{{ route('event_create') }}" method="GET">
+                            @csrf
+                            <button type="submit" class="btn btn-cyan btn-sm text-white submit" >Додати подію!</button>
+                        </form>
+
                     </div>
                     <div class="table-responsive">
                         <table id="zero_config" class="table table-striped table-bordered">
