@@ -38,8 +38,6 @@ Route::get('/login',    [App\Http\Controllers\HomeController::class, 'login'])->
 
 	Route::post('/event/create/{id}',   [EventsController::class, 'event_create']);
 
-
-
     Route::get('/logs',                 [AdminController::class, 'logs_monitor']);
 
     Route::get('/event/show/{id}',      [EventsController::class, 'event_show']);
