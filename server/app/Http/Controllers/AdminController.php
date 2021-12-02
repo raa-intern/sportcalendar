@@ -30,7 +30,7 @@ class AdminController extends Controller
         $events = $eventsModel->getEvents();
         return view('admin/events', [
             'user' => 'admin',
-            'events' => $events
+            'events' => $events,
         ]);
     }
 
@@ -101,7 +101,7 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
 
     /**
      * Store a newly created resource in storage.

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 @extends('layouts.admin')
 
 @section('title', 'events')
@@ -28,6 +22,7 @@
             </div>
         </div>
     </div>
+
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
@@ -38,6 +33,7 @@
         <!-- ============================================================== -->
         <!-- Start Page Content -->
         <!-- ============================================================== -->
+
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title mb-0">Browesr statistics</h5>
@@ -57,8 +53,6 @@
                     </tr>
 
                 @endforeach
-
-
                 </tbody>
             </table>
         </div>
