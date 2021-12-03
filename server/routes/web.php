@@ -52,7 +52,8 @@ Route::get('/login',    [App\Http\Controllers\HomeController::class, 'login'])->
 	Route::get('/event/create',         [EventsController::class, 'event_create'])->name('event_create');
 	Route::post('/event/store',         [EventsController::class, 'event_store'])->name('event_store');
 
-	Route::put('/event/edit/{id}',      [EventsController::class, 'event_edit']);
+	Route::get('/event/edit/{id}',      [EventsController::class, 'event_edit']);
+	Route::post('/event/save/{id?}',     [EventsController::class, 'event_save'])->name('event_save');
 	Route::any('/event/delete/{id}',    [EventsController::class, 'event_delete']);
 
     Route::get('/user/show/{id}',       [UsersController::class, 'user_show']);

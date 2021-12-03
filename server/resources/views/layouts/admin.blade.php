@@ -10,10 +10,15 @@
      <!-- Favicon icon -->
      <link rel="icon" type="image/png" sizes="16x16" href="/admin/assets/images/favicon.png" />
      <!-- Custom CSS -->
-     <link href="/admin/assets/libs/flot/css/float-chart.css" rel="stylesheet" />   
+     <link href="/admin/assets/libs/flot/css/float-chart.css" rel="stylesheet" />
      <link href="/admin/assets/libs/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet" />
      <link href="/admin/assets/extra-libs/calendar/calendar.css" rel="stylesheet" />
      <link href="/admin/dist/css/style.min.css" rel="stylesheet" />
+
+     <!-- css file from image lib -->
+     <link href="/admin/assets/libs/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+     <link href="/admin/dist/css/style.min.css" rel="stylesheet">
+     <!-- end css image -->
 
      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,6 +27,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
      <link rel=»stylesheet» href=»https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css» />
+
  </head>
 
  <body>
@@ -449,6 +455,11 @@
      <script src="/admin/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
      <script src="/admin/assets/libs/quill/dist/quill.min.js"></script>
      <!-- Charts js Files -->
+
+     <!-- Page image -->
+     <script src="/admin/assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+     <script src="/admin/assets/libs/magnific-popup/meg.init.js"></script>
+     <!-- end Page image-->
 
      <!--This page JavaScript -->
      <!-- <script src="../dist/js/pages/dashboards/dashboard1.js"></script> -->

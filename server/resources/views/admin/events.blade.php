@@ -86,7 +86,7 @@
                                     <td>{{ $event->start_date }}</td>
                                     <td>
                                         <i class="mdi mdi-television-guide"></i><a href="/event/show/{{$event->id}}" aria-expanded="false"><span class="hide-menu"><b>Show</b></span></a>
-                                        <i class="mdi mdi-pencil"></i><a href="/event/edit/{id}" aria-expanded="false"><span class="hide-menu"><b>Edit</b></span></a>
+                                        <i class="mdi mdi-pencil"></i><a href="/event/edit/{{ $event->id }}" aria-expanded="false"><span class="hide-menu"><b>Edit</b></span></a>
                                         <i class="mdi mdi-archive"></i><a href="/event/delete/{{ $event->id }}" aria-expanded="false"><span class="hide-menu"><b>Delete</b></span></a>
                                     </td>
                                 </tr>
