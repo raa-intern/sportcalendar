@@ -32,15 +32,15 @@ Route::get('/login',    [App\Http\Controllers\HomeController::class, 'login'])->
 	Route::get('/bells',                [AdminController::class, 'bells_list']);
     Route::get('/letters',              [AdminController::class, 'letters_list']);
 
-    Route::get('/logs',                 [AdminController::class, 'logs_monitor']);  
+    Route::get('/logs',                 [AdminController::class, 'logs_monitor']);
 
-    // Route::get('/event/show/{id}',      [EventsController::class, 'event_show']); // +
+    //Route::get('/event/show/{id}',      [EventsController::class, 'event_show']); // +
 
-	Route::post('/event/create/{id}',   [EventsController::class, 'event_create']);
+	//Route::post('/event/create/{id}',   [EventsController::class, 'event_create']);
 
     Route::get('/logs',                 [AdminController::class, 'logs_monitor']);
 
-    Route::get('/event/show/{id}',      [EventsController::class, 'event_show']);
+    //Route::get('/event/show/{id}',      [EventsController::class, 'event_show']);
 
     // Route::get('/logmonitor',           [AdminController::class, 'logs_monitor']);
 
@@ -54,8 +54,8 @@ Route::get('/login',    [App\Http\Controllers\HomeController::class, 'login'])->
 	Route::any('/event/delete/{id}',    [EventsController::class, 'event_delete']);
 
     Route::get('/user/show/{id}',       [UsersController::class, 'user_show']);
-    
-   
+
+
 
 
 
