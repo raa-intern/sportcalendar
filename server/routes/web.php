@@ -4,6 +4,8 @@ use App\Http\Controllers\EventsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ParserController;
+// use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +18,7 @@ use App\Http\Controllers\ParserController;
 |
 */
 
-Route::get('/',         [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/',         [App\Http\Controllers\HomeController::class, 'start'])->name('start');
 Route::get('/login',    [App\Http\Controllers\HomeController::class, 'login'])->name('login');
 // Route::get('/laravel', function () {return view('welcome');});
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
