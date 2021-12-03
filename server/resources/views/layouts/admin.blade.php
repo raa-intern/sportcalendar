@@ -232,7 +232,7 @@
                     waves-effect waves-dark
                     pro-pic
                   " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                 <img src="../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31" />
+                                 <img src="/admin/assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31" />
                              </a>
                              <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
                                  <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a>

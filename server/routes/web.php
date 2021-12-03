@@ -31,7 +31,6 @@ Route::get('/login',    [App\Http\Controllers\HomeController::class, 'login'])->
 	Route::get('/dashboard2',           [AdminController::class, 'dashboard2']);
 	Route::get('/bells',                [AdminController::class, 'bells_list']);
     Route::get('/letters',              [AdminController::class, 'letters_list']);
-
     Route::get('/logs',                 [AdminController::class, 'logs_monitor']);  
 
     // Route::get('/event/show/{id}',      [EventsController::class, 'event_show']); // +

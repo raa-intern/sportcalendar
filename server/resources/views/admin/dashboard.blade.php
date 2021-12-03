@@ -37,6 +37,7 @@
      <div class="row">
          <!-- Column -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/dashboard2">
              <div class="card card-hover">
                  <div class="box bg-cyan text-center">
                      <h1 class="font-light text-white">
@@ -45,9 +46,11 @@
                      <h6 class="text-white">Dashboard-II</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
          <div class="col-md-6 col-lg-4 col-xlg-3">
+            <a href="/charts">
              <div class="card card-hover">
                  <div class="box bg-success text-center">
                      <h1 class="font-light text-white">
@@ -56,9 +59,11 @@
                      <h6 class="text-white">Графіки</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/widgets">
              <div class="card card-hover">
                  <div class="box bg-warning text-center">
                      <h1 class="font-light text-white">
@@ -67,9 +72,11 @@
                      <h6 class="text-white">Віджети</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/organizer">
              <div class="card card-hover">
                  <div class="box bg-danger text-center">
                      <h1 class="font-light text-white">
@@ -78,9 +85,11 @@
                      <h6 class="text-white">Органайзер</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/parser">
              <div class="card card-hover">
                  <div class="box bg-info text-center">
                      <h1 class="font-light text-white">
@@ -89,10 +98,11 @@
                      <h6 class="text-white">Парсер</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
-         <!-- Column -->
          <div class="col-md-6 col-lg-4 col-xlg-3">
+            <a href="/events">
              <div class="card card-hover">
                  <div class="box bg-danger text-center">
                      <h1 class="font-light text-white">
@@ -101,20 +111,24 @@
                      <h6 class="text-white">Спортивні події</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/partners">
              <div class="card card-hover">
                  <div class="box bg-info text-center">
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-relative-scale"></i>
                      </h1>
-                     <h6 class="text-white">Buttons</h6>
+                     <h6 class="text-white">Партнери</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/letters">
              <div class="card card-hover">
                  <div class="box bg-cyan text-center">
                      <h1 class="font-light text-white">
@@ -123,20 +137,24 @@
                      <h6 class="text-white">Пошта</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
-         <div class="col-md-6 col-lg-2 col-xlg-3">
+         <div class="col-md-6 col-lg-2 col-xlg-3" >
+            <a href="/users">
              <div class="card card-hover">
                  <div class="box bg-success text-center">
                      <h1 class="font-light text-white">
-                         <i class="mdi mdi-calendar-check"></i>
+                        <i class="mdi mdi-calendar-check"></i>
                      </h1>
-                     <h6 class="text-white">Calnedar</h6>
+                     <h6 class="text-white">Користувачі</h6>
                  </div>
              </div>
+             </a>
          </div>
          <!-- Column -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/logs">
              <div class="card card-hover">
                  <div class="box bg-warning text-center">
                      <h1 class="font-light text-white">
@@ -145,6 +163,7 @@
                      <h6 class="text-white">Сервер</h6>
                  </div>
              </div>
+            </a>
          </div>
          <!-- Column -->
      </div>
@@ -237,7 +256,8 @@
                      <!-- Comment Row -->
                      <div class="d-flex flex-row comment-row mt-0">
                          <div class="p-2">
-                             <img src="../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle" />
+                             <img src="/admin/assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle" />
+
                          </div>
                          <div class="comment-text w-100">
                              <h6 class="font-medium">James Anderson</h6>
@@ -261,7 +281,8 @@
                      <!-- Comment Row -->
                      <div class="d-flex flex-row comment-row">
                          <div class="p-2">
-                             <img src="../assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle" />
+                             <img src="/admin/assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle" />
+
                          </div>
                          <div class="comment-text active w-100">
                              <h6 class="font-medium">Michael Jorden</h6>
@@ -285,7 +306,8 @@
                      <!-- Comment Row -->
                      <div class="d-flex flex-row comment-row">
                          <div class="p-2">
-                             <img src="../assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle" />
+                             <img src="/admin/assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle" />
+
                          </div>
                          <div class="comment-text w-100">
                              <h6 class="font-medium">Johnathan Doeting</h6>
@@ -325,16 +347,16 @@
                                  </div>
                                  <ul class="list-style-none assignedto">
                                      <li class="assignee">
-                                         <img class="rounded-circle" width="40" src="../assets/images/users/1.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave" />
+                                         <img class="rounded-circle" width="40" src="/admin/assets/images/users/1.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave" />
                                      </li>
                                      <li class="assignee">
-                                         <img class="rounded-circle" width="40" src="../assets/images/users/2.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica" />
+                                         <img class="rounded-circle" width="40" src="/admin/assets/images/users/2.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica" />
                                      </li>
                                      <li class="assignee">
-                                         <img class="rounded-circle" width="40" src="../assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+                                         <img class="rounded-circle" width="40" src="/admin/assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
                                      </li>
                                      <li class="assignee">
-                                         <img class="rounded-circle" width="40" src="../assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
+                                         <img class="rounded-circle" width="40" src="/admin/assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
                                      </li>
                                  </ul>
                              </li>
@@ -359,10 +381,12 @@
                                  </div>
                                  <ul class="list-style-none assignedto">
                                      <li class="assignee">
-                                         <img class="rounded-circle" width="40" src="../assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+                                         <img class="rounded-circle" width="40" src="/admin/assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+
                                      </li>
                                      <li class="assignee">
-                                         <img class="rounded-circle" width="40" src="../assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
+                                         <img class="rounded-circle" width="40" src="/admin/assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
+
                                      </li>
                                  </ul>
                              </li>
@@ -387,10 +411,12 @@
                                  </div>
                                  <ul class="list-style-none assignedto">
                                      <li class="assignee">
-                                         <img class="rounded-circle" width="40" src="../assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+                                         <img class="rounded-circle" width="40" src="/admin/assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+
                                      </li>
                                      <li class="assignee">
-                                         <img class="rounded-circle" width="40" src="../assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
+                                         <img class="rounded-circle" width="40" src="/admin/assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
+
                                      </li>
                                  </ul>
                              </li>
@@ -537,7 +563,8 @@
                              <!--chat Row -->
                              <li class="chat-item">
                                  <div class="chat-img">
-                                     <img src="../assets/images/users/1.jpg" alt="user" />
+                                     <img src="/admin/assets/images/users/1.jpg" alt="user" />
+
                                  </div>
                                  <div class="chat-content">
                                      <h6 class="font-medium">James Anderson</h6>
@@ -551,7 +578,8 @@
                              <!--chat Row -->
                              <li class="chat-item">
                                  <div class="chat-img">
-                                     <img src="../assets/images/users/2.jpg" alt="user" />
+                                     <img src="/admin/assets/images/users/2.jpg" alt="user" />
+
                                  </div>
                                  <div class="chat-content">
                                      <h6 class="font-medium">Bianca Doe</h6>
@@ -583,7 +611,8 @@
                              <!--chat Row -->
                              <li class="chat-item">
                                  <div class="chat-img">
-                                     <img src="../assets/images/users/3.jpg" alt="user" />
+                                     <img src="/admin/assets/images/users/3.jpg" alt="user" />
+
                                  </div>
                                  <div class="chat-content">
                                      <h6 class="font-medium">Angelina Rhodes</h6>
@@ -619,7 +648,8 @@
                      <!-- Comment Row -->
                      <div class="d-flex flex-row comment-row mt-0">
                          <div class="p-2">
-                             <img src="../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle" />
+                             <img src="/admin/assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle" />
+
                          </div>
                          <div class="comment-text w-100">
                              <h6 class="font-medium">James Anderson</h6>
@@ -643,7 +673,8 @@
                      <!-- Comment Row -->
                      <div class="d-flex flex-row comment-row">
                          <div class="p-2">
-                             <img src="../assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle" />
+                             <img src="/admin/assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle" />
+
                          </div>
                          <div class="comment-text active w-100">
                              <h6 class="font-medium">Michael Jorden</h6>
@@ -667,7 +698,8 @@
                      <!-- Comment Row -->
                      <div class="d-flex flex-row comment-row">
                          <div class="p-2">
-                             <img src="../assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle" />
+                             <img src="/admin/assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle" />
+
                          </div>
                          <div class="comment-text w-100">
                              <h6 class="font-medium">Johnathan Doeting</h6>
@@ -804,12 +836,14 @@
                                  end.multiple paragraphs and is full of waffle to pad out
                                  the comment..
                              </p>
-                             <img src="../assets/images/background/img4.jpg" class="img-fluid" />
+                             <img src="/admin/assets/images/background/img4.jpg" class="img-fluid" />
+
                          </div>
                      </div>
                      <div class="tab-pane p-20" id="profile" role="tabpanel">
                          <div class="p-20">
-                             <img src="../assets/images/background/img4.jpg" class="img-fluid" />
+                             <img src="/admin/assets/images/background/img4.jpg" class="img-fluid" />
+
                              <p class="mt-2">
                                  And is full of waffle to It has multiple paragraphs and
                                  is full of waffle to pad out the comment. Usually, you
@@ -828,7 +862,8 @@
                                  end.multiple paragraphs and is full of waffle to pad out
                                  the comment..
                              </p>
-                             <img src="../assets/images/background/img4.jpg" class="img-fluid" />
+                             <img src="/admin/assets/images/background/img4.jpg" class="img-fluid" />
+
                          </div>
                      </div>
                  </div>
