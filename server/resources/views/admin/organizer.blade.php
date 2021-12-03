@@ -13,7 +13,7 @@
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">
                             Library
                         </li>
@@ -89,7 +89,7 @@
                     <!-- Comment Row -->
                     <div class="d-flex flex-row comment-row mt-0">
                         <div class="p-2">
-                            <img src="../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle" />
+                            <img src="/admin/assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle" />
                         </div>
                         <div class="comment-text w-100">
                             <h6 class="font-medium">James Anderson</h6>
@@ -113,7 +113,7 @@
                     <!-- Comment Row -->
                     <div class="d-flex flex-row comment-row">
                         <div class="p-2">
-                            <img src="../assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle" />
+                            <img src="/admin/assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle" />
                         </div>
                         <div class="comment-text active w-100">
                             <h6 class="font-medium">Michael Jorden</h6>
@@ -137,7 +137,7 @@
                     <!-- Comment Row -->
                     <div class="d-flex flex-row comment-row">
                         <div class="p-2">
-                            <img src="../assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle" />
+                            <img src="/admin/assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle" />
                         </div>
                         <div class="comment-text w-100">
                             <h6 class="font-medium">Johnathan Doeting</h6>
@@ -177,16 +177,18 @@
                                 </div>
                                 <ul class="list-style-none assignedto">
                                     <li class="assignee">
-                                        <img class="rounded-circle" width="40" src="../assets/images/users/1.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave" />
+                                        <img class="rounded-circle" width="40" src="/admin/assets/images/users/1.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave" />
                                     </li>
                                     <li class="assignee">
-                                        <img class="rounded-circle" width="40" src="../assets/images/users/2.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica" />
+                                        <img class="rounded-circle" width="40" src="/admin/assets/images/users/2.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica" />
+
                                     </li>
                                     <li class="assignee">
-                                        <img class="rounded-circle" width="40" src="../assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+                                        <img class="rounded-circle" width="40" src="/admin/assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+
                                     </li>
                                     <li class="assignee">
-                                        <img class="rounded-circle" width="40" src="../assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
+                                        <img class="rounded-circle" width="40" src="/admin/assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
                                     </li>
                                 </ul>
                             </li>
@@ -211,10 +213,10 @@
                                 </div>
                                 <ul class="list-style-none assignedto">
                                     <li class="assignee">
-                                        <img class="rounded-circle" width="40" src="../assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+                                        <img class="rounded-circle" width="40" src="/admin/assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
                                     </li>
                                     <li class="assignee">
-                                        <img class="rounded-circle" width="40" src="../assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
+                                        <img class="rounded-circle" width="40" src="/admin/assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
                                     </li>
                                 </ul>
                             </li>
@@ -239,10 +241,10 @@
                                 </div>
                                 <ul class="list-style-none assignedto">
                                     <li class="assignee">
-                                        <img class="rounded-circle" width="40" src="../assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
+                                        <img class="rounded-circle" width="40" src="/admin/assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
                                     </li>
                                     <li class="assignee">
-                                        <img class="rounded-circle" width="40" src="../assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
+                                        <img class="rounded-circle" width="40" src="/admin/assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
                                     </li>
                                 </ul>
                             </li>
