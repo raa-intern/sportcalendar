@@ -28,6 +28,7 @@ Route::get('/login',    [App\Http\Controllers\HomeController::class, 'login'])->
     Route::get('/parser',               [AdminController::class, 'parser_list']);
     Route::get('/charts',               [AdminController::class, 'charts_list']);
     Route::get('/widgets',              [AdminController::class, 'widgets_list']);
+    Route::get('/partners',             [AdminController::class, 'partners_list']);
     Route::get('/users',                [AdminController::class, 'users_list']);
     Route::get('/organizer',            [AdminController::class, 'organizer']);
 	Route::get('/dashboard2',           [AdminController::class, 'dashboard2']);

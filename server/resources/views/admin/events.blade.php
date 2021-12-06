@@ -8,13 +8,13 @@
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-            <h4 class="page-title">Events Reports</h4>
+            <h4 class="page-title">Спорт-події</h4>
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/dashboard">Dashboard-I</a></li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Library
+                            Спорт-події
                         </li>
                     </ol>
                 </nav>
@@ -25,7 +25,6 @@
 <!-- ============================================================== -->
 <!-- End Bread crumb and right sidebar toggle -->
 <!-- ============================================================== -->
-
 <!-- Container fluid  -->
 <!-- ============================================================== -->
 <div class="container-fluid">
@@ -55,7 +54,7 @@
             <div class="card">
                 <div class="card-body">
                     <div>
-                        <h5 class="card-title">Список подій <strong>Sportcalendar</strong></h5>
+                        <h5 class="card-title">Список доданних спорт-подій в <strong>Sportcalendar</strong></h5>
                         <form action="{{ route('event_create') }}" method="GET">
                             @csrf
                             <button type="submit" class="btn btn-cyan btn-sm text-white submit" >Додати подію!</button>

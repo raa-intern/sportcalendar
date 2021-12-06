@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
-use App\Models\Users;
-use App\Models\Parser;
 use App\Models\Events;
+use App\Models\Parser;
+use App\Models\Partners;
+use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
@@ -56,6 +57,16 @@ class AdminController extends Controller
             'user' => 'admin']);
     }
 
+    public function partners_list()
+    {
+        $partnersModel = new Partners();
+        $partners = $partnersModel->getPartners();
+        return view('admin/partners', [
+            'user' => 'admin',
+            'users' => $partners
+        ]);
+    }
+    
     public function users_list()
     {
         $usersModel = new Users();

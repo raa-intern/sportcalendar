@@ -9,13 +9,13 @@
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-            <h4 class="page-title">Користувачі</h4>
+            <h4 class="page-title">Організатори</h4>
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/dashboard">Dashboard-I</a></li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Library
+                            Організатори
                         </li>
                     </ol>
                 </nav>
@@ -37,7 +37,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title mb-0">Повний список користувачів <b>Sportcalendar</b></h5>
+                    <h5 class="card-title mb-0">Список організаторів в <b>Sportcalendar</b></h5>
                 </div>
                 <div class="table-responsive">
                     <table class="table">
