@@ -43,14 +43,14 @@
                             <div class="form-group row">
                                 <label
                                     for="event_name"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Назва
                                     @if ($errors->has('event_name'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
 
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -59,19 +59,15 @@
                                         value="{{ $event->event_name }}"
                                     />
                                 </div>
-
-
-                            </div>
-                            <div class="form-group row">
                                 <label
                                     for="event_type"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Тип
                                     @if ($errors->has('event_type'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -84,13 +80,13 @@
                             <div class="form-group row">
                                 <label
                                     for="category_id"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Id категорії
                                     @if ($errors->has('category_id'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -99,17 +95,15 @@
                                         value="{{ $event->category_id }}"
                                     />
                                 </div>
-                            </div>
-                            <div class="form-group row">
                                 <label
                                     for="event_description"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Опис заходу
                                     @if ($errors->has('event_description'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <textarea
                                         class="form-control"
                                         id="event_description"
@@ -119,13 +113,13 @@
                             <div class="form-group row">
                                 <label
                                     for="city"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Місто проведення
                                     @if ($errors->has('city'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -134,17 +128,15 @@
                                         value="{{ $event->city }}"
                                     />
                                 </div>
-                            </div>
-                            <div class="form-group row">
                                 <label
                                     for="street"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Вулиця проведення
                                     @if ($errors->has('street'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -157,13 +149,13 @@
                             <div class="form-group row">
                                 <label
                                     for="build_number"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Номер будинку
                                     @if ($errors->has('build_number'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -172,17 +164,15 @@
                                         value="{{ $event->build_number }}"
                                     />
                                 </div>
-                            </div>
-                            <div class="form-group row">
                                 <label
                                     for="geo_point"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Індекс
                                     @if ($errors->has('geo_point'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -193,13 +183,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 text-end control-label col-form-label">Дата реєстрації
+                                <label class="col-sm-2 text-end control-label col-form-label">Дата реєстрації
                                     <small class="text-muted">dd/mm/yyyy</small>
                                     @if ($errors->has('registration_date'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         id="registration_date"
                                         name="registration_date"
@@ -209,13 +199,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 text-end control-label col-form-label">Дата початку
+                                <label class="col-sm-2 text-end control-label col-form-label">Дата початку
                                     <small class="text-muted">dd/mm/yyyy</small>
                                     @if ($errors->has('start_date'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         id="start_date"
                                         name="start_date"
@@ -225,13 +215,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 text-end control-label col-form-label">Дата закінчення
+                                <label class="col-sm-2 text-end control-label col-form-label">Дата закінчення
                                     <small class="text-muted">dd/mm/yyyy</small>
                                     @if ($errors->has('finish_date'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         id="finish_date"
                                         name="finish_date"
@@ -243,13 +233,13 @@
                             <div class="form-group row">
                                 <label
                                     for="event_link"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Посилання на запрошення
                                     @if ($errors->has('event_link'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -258,17 +248,15 @@
                                         value="{{ $event->event_link }}"
                                     />
                                 </div>
-                            </div>
-                            <div class="form-group row">
                                 <label
                                     for="event_status"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Статус запрошення
                                     @if ($errors->has('event_status'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -281,13 +269,13 @@
                             <div class="form-group row">
                                 <label
                                     for="event_status"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Зображення лого
                                     @if ($errors->has('image_intro'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="file"
                                         class="form-control-file"
@@ -367,13 +355,13 @@
                             <div class="form-group row">
                                 <label
                                     for="alt_intro"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Текст для зображення логотипу
                                     @if ($errors->has('alt_intro'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -382,17 +370,15 @@
                                         value="{{ $event->alt_intro }}"
                                     />
                                 </div>
-                            </div>
-                            <div class="form-group row">
                                 <label
                                     for="alt_full"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Текст для повного зображення
                                     @if ($errors->has('alt_full'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -405,13 +391,13 @@
                             <div class="form-group row">
                                 <label
                                     for="meta_title"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Мета тег title
                                     @if ($errors->has('meta_title'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"
@@ -420,17 +406,15 @@
                                         value="{{ $event->meta_title }}"
                                     />
                                 </div>
-                            </div>
-                            <div class="form-group row">
                                 <label
                                     for="meta_desc"
-                                    class="col-sm-3 text-end control-label col-form-label">
+                                    class="col-sm-2 text-end control-label col-form-label">
                                     Мета тег desc
                                     @if ($errors->has('meta_desc'))
                                         <span class="badge bg-danger">Danger</span>
                                     @endif
                                 </label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input
                                         type="text"
                                         class="form-control"

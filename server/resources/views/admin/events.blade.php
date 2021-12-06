@@ -49,6 +49,15 @@
             </div>
         </div>
     @endif
+    @if(isset($update))
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    Оновлення успішно виконано !
+                </div>
+            </div>
+        </div>
+    @endif
     <div class="row">
         <div class="col-12">
             <div class="card">

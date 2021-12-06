@@ -58,8 +58,8 @@ class EventsController extends Controller
             'finish_date' =>        'required',
             'event_link' =>         'required',
             'event_status' =>       'required',
-            'image_intro' =>        'required',
-            'image_full' =>         'required',
+            'image_intro' =>        'nullable',
+            'image_full' =>         'nullable',
             'meta_title' =>         'required',
             'meta_desc' =>          'required',
             'rating' =>             'required',
@@ -76,7 +76,7 @@ class EventsController extends Controller
         return view('admin/events', [
             'user' => 'admin',
             'events' => $events,
-            'create' => true
+            'update' => true
         ]);
     }
 
