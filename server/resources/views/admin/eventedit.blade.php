@@ -36,10 +36,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <form class="form-horizontal" action="{{ route('event_store') }}" method="POST" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{{ route('event_save').'/'.$save_form_id }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
-                            <h4 class="card-title">Створення події</h4>
+                            <h4 class="card-title">Редагування події</h4>
                             <div class="form-group row">
                                 <label
                                     for="event_name"
@@ -56,6 +56,7 @@
                                         class="form-control"
                                         id="event_name"
                                         name="event_name"
+                                        value="{{ $event->event_name }}"
                                     />
                                 </div>
 
@@ -76,6 +77,7 @@
                                         class="form-control"
                                         id="event_type"
                                         name="event_type"
+                                        value="{{ $event->event_type }}"
                                     />
                                 </div>
                             </div>
@@ -94,6 +96,7 @@
                                         class="form-control"
                                         id="category_id"
                                         name="category_id"
+                                        value="{{ $event->category_id }}"
                                     />
                                 </div>
                             </div>
@@ -107,7 +110,10 @@
                                     @endif
                                 </label>
                                 <div class="col-sm-6">
-                                    <textarea class="form-control" id="event_description" name="event_description"></textarea>
+                                    <textarea
+                                        class="form-control"
+                                        id="event_description"
+                                        name="event_description">{{ $event->event_description }}</textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -125,6 +131,7 @@
                                         class="form-control"
                                         id="city"
                                         name="city"
+                                        value="{{ $event->city }}"
                                     />
                                 </div>
                             </div>
@@ -143,6 +150,7 @@
                                         class="form-control"
                                         id="street"
                                         name="street"
+                                        value="{{ $event->street }}"
                                     />
                                 </div>
                             </div>
@@ -161,6 +169,7 @@
                                         class="form-control"
                                         id="build_number"
                                         name="build_number"
+                                        value="{{ $event->build_number }}"
                                     />
                                 </div>
                             </div>
@@ -179,6 +188,7 @@
                                         class="form-control"
                                         id="geo_point"
                                         name="geo_point"
+                                        value="{{ $event->geo_point }}"
                                     />
                                 </div>
                             </div>
@@ -190,7 +200,12 @@
                                     @endif
                                 </label>
                                 <div class="col-sm-6">
-                                    <input id="registration_date" name="registration_date" type="datetime-local">
+                                    <input
+                                        id="registration_date"
+                                        name="registration_date"
+                                        type="datetime-local"
+                                        value="{{ date('Y-m-d\TH:i:s', strtotime($event->registration_date)) }}"
+                                    />
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -201,7 +216,12 @@
                                     @endif
                                 </label>
                                 <div class="col-sm-6">
-                                    <input id="start_date" name="start_date" type="datetime-local">
+                                    <input
+                                        id="start_date"
+                                        name="start_date"
+                                        type="datetime-local"
+                                        value="{{ date('Y-m-d\TH:i:s', strtotime($event->start_date)) }}"
+                                    />
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -212,7 +232,12 @@
                                     @endif
                                 </label>
                                 <div class="col-sm-6">
-                                    <input id="finish_date" name="finish_date" type="datetime-local">
+                                    <input
+                                        id="finish_date"
+                                        name="finish_date"
+                                        type="datetime-local"
+                                        value="{{ date('Y-m-d\TH:i:s', strtotime($event->finish_date)) }}"
+                                    />
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -230,6 +255,7 @@
                                         class="form-control"
                                         id="event_link"
                                         name="event_link"
+                                        value="{{ $event->event_link }}"
                                     />
                                 </div>
                             </div>
@@ -248,6 +274,7 @@
                                         class="form-control"
                                         id="event_status"
                                         name="event_status"
+                                        value="{{ $event->event_status }}"
                                     />
                                 </div>
                             </div>
@@ -261,7 +288,37 @@
                                     @endif
                                 </label>
                                 <div class="col-sm-6">
-                                    <input type="file" class="form-control-file" id="image_intro" name="image_intro">
+                                    <input
+                                        type="file"
+                                        class="form-control-file"
+                                        id="image_intro"
+                                        name="image_intro"
+                                        value="{{ $event->image_intro }}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"></div>
+                                <div class="card el-element-overlay col-md-3 ">
+                                    <div class="el-card-item">
+                                        <div class="el-card-avatar el-overlay-1">
+
+                                            <img width="400" height="400" src="{{ asset('storage/image/origin/'.$event->image_intro) }}" alt="user" >
+                                            <div class="el-overlay">
+                                                <ul class="list-style-none el-info">
+                                                    <li class="el-item">
+                                                        <a class="
+                                                          btn
+                                                          default
+                                                          btn-outline
+                                                          image-popup-vertical-fit
+                                                          el-link
+                                                        " href="{{ asset('storage/image/origin/'.$event->image_intro) }}"><i class="mdi mdi-magnify-plus"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -274,7 +331,37 @@
                                     @endif
                                 </label>
                                 <div class="col-sm-6">
-                                    <input type="file" class="form-control-file" id="image_full" name="image_full">
+                                    <input
+                                        type="file"
+                                        class="form-control-file"
+                                        id="image_full"
+                                        name="image_full"
+                                        value="{{ $event->image_full }}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"></div>
+                                <div class="card el-element-overlay col-md-3 ">
+                                    <div class="el-card-item">
+                                        <div class="el-card-avatar el-overlay-1">
+
+                                            <img width="400" height="400" src="{{ asset('storage/image/origin/'.$event->image_full) }}" alt="user" >
+                                            <div class="el-overlay">
+                                                <ul class="list-style-none el-info">
+                                                    <li class="el-item">
+                                                        <a class="
+                                                          btn
+                                                          default
+                                                          btn-outline
+                                                          image-popup-vertical-fit
+                                                          el-link
+                                                        " href="{{ asset('storage/image/origin/'.$event->image_full) }}"><i class="mdi mdi-magnify-plus"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -292,6 +379,7 @@
                                         class="form-control"
                                         id="alt_intro"
                                         name="alt_intro"
+                                        value="{{ $event->alt_intro }}"
                                     />
                                 </div>
                             </div>
@@ -310,6 +398,7 @@
                                         class="form-control"
                                         id="alt_full"
                                         name="alt_full"
+                                        value="{{ $event->alt_full }}"
                                     />
                                 </div>
                             </div>
@@ -328,6 +417,7 @@
                                         class="form-control"
                                         id="meta_title"
                                         name="meta_title"
+                                        value="{{ $event->meta_title }}"
                                     />
                                 </div>
                             </div>
@@ -346,6 +436,7 @@
                                         class="form-control"
                                         id="meta_desc"
                                         name="meta_desc"
+                                        value="{{ $event->meta_desc }}"
                                     />
                                 </div>
                             </div>
@@ -364,6 +455,7 @@
                                         class="form-control"
                                         id="rating"
                                         name="rating"
+                                        value="{{ $event->rating }}"
                                     />
                                 </div>
                             </div>
@@ -382,6 +474,7 @@
                                         class="form-control"
                                         id="url"
                                         name="url"
+                                        value="{{ $event->url }}"
                                     />
                                 </div>
                             </div>
@@ -400,6 +493,7 @@
                                         class="form-control"
                                         id="event_source"
                                         name="event_source"
+                                        value="{{ $event->event_source }}"
                                     />
                                 </div>
                             </div>
@@ -411,7 +505,12 @@
                                     @endif
                                 </label>
                                 <div class="col-sm-6">
-                                    <input id="created_at" name="created_at" type="datetime-local">
+                                    <input
+                                        id="created_at"
+                                        name="created_at"
+                                        type="datetime-local"
+                                        value="{{ date('Y-m-d\TH:i:s', strtotime($event->created_at)) }}"
+                                    />
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -422,7 +521,12 @@
                                     @endif
                                 </label>
                                 <div class="col-sm-6">
-                                    <input id="updated_at" name="updated_at" type="datetime-local">
+                                    <input
+                                        id="updated_at"
+                                        name="updated_at"
+                                        type="datetime-local"
+                                        value="{{ date('Y-m-d\TH:i:s', strtotime($event->updated_at)) }}"
+                                    />
                                 </div>
                             </div>
                         </div>

@@ -34,12 +34,19 @@ class EventsController extends Controller
         ]);
     }
 
-    public function event_create(){
-        return view('admin/eventcreate');
+    public function event_edit($id)
+    {
+        $eventModel = new Events();
+        $event = $eventModel->getEventByID($id);
+        return view('admin/eventedit', [
+            'user' => 'admin',
+            'event' => $event,
+            'save_form_id' => $id
+        ]);
     }
 
-    public function event_store(Request $request){
-/*
+    public function event_save(Request $request, $id)
+    {
         $request->validate([
             'event_name' =>         'required',
             'event_type' =>         'required',
@@ -54,13 +61,52 @@ class EventsController extends Controller
             'image_intro' =>        'required',
             'image_full' =>         'required',
             'meta_title' =>         'required',
-            'meta_disc' =>          'required',
+            'meta_desc' =>          'required',
             'rating' =>             'required',
             'url' =>                'required',
             'created_at' =>         'required',
             'updated_at' =>         'required',
         ]);
-*/
+
+        $eventModel = new Events();
+        $eventModel->saveEvent($request, $id);
+
+        $eventModel = new Events();
+        $events = $eventModel->getEvents();
+        return view('admin/events', [
+            'user' => 'admin',
+            'events' => $events,
+            'create' => true
+        ]);
+    }
+
+    public function event_create(){
+        return view('admin/eventcreate');
+    }
+
+    public function event_store(Request $request)
+    {
+        $request->validate([
+            'event_name' =>         'required',
+            'event_type' =>         'required',
+            'category_id' =>        'required',
+            'city' =>               'required',
+            'street' =>             'required',
+            'registration_date' =>  'required',
+            'start_date' =>         'required',
+            'finish_date' =>        'required',
+            'event_link' =>         'required',
+            'event_status' =>       'required',
+            'image_intro' =>        'required',
+            'image_full' =>         'required',
+            'meta_title' =>         'required',
+            'meta_desc' =>          'required',
+            'rating' =>             'required',
+            'url' =>                'required',
+            'created_at' =>         'required',
+            'updated_at' =>         'required',
+        ]);
+
         $eventModel = new Events();
         $eventModel->createEvent($request);
 
