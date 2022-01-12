@@ -51,6 +51,7 @@ class EventsController extends Controller
     public function event_save(Request $request, $id)
     {
         $request->validate([
+<<<<<<< HEAD
         'event_name' => 'required',
         'event_type' => 'required',
         'category_id' => 'required',
@@ -69,6 +70,26 @@ class EventsController extends Controller
         'url' => 'required',
         'created_at' => 'required',
         'updated_at' => 'required',
+=======
+            'event_name' =>         'required',
+            'event_type' =>         'required',
+            'category_id' =>        'required',
+            'city' =>               'required',
+            'street' =>             'required',
+            'registration_date' =>  'required',
+            'start_date' =>         'required',
+            'finish_date' =>        'required',
+            'event_link' =>         'required',
+            'event_status' =>       'required',
+            'image_intro' =>        'nullable',
+            'image_full' =>         'nullable',
+            'meta_title' =>         'required',
+            'meta_desc' =>          'required',
+            'rating' =>             'required',
+            'url' =>                'required',
+            'created_at' =>         'required',
+            'updated_at' =>         'required',
+>>>>>>> a4316011c4e518d1d5bdb994cbcccf3301ffc074
         ]);
 
         $eventModel = new Events();
@@ -77,9 +98,15 @@ class EventsController extends Controller
         $eventModel = new Events();
         $events = $eventModel->getEvents();
         return view('admin/events', [
+<<<<<<< HEAD
         'user' => 'admin',
         'events' => $events,
         'create' => true
+=======
+            'user' => 'admin',
+            'events' => $events,
+            'update' => true
+>>>>>>> a4316011c4e518d1d5bdb994cbcccf3301ffc074
         ]);
     }
 
