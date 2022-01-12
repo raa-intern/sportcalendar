@@ -14,6 +14,12 @@ return [
     |
     */
 
+    // 'google' => [
+    //     'client_id' => 'app id',
+    //     'client_secret' => 'add secret',
+    //     'redirect' => 'http://localhost:8080/auth/google/callback',
+    // ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),

@@ -1,20 +1,20 @@
 @extends('layouts.admin')
-
 @section('title', 'dashboard')
-
 @section('content')
+
 <!-- Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-            <h4 class="page-title">Dashboard-I</h4>
+            <h4 class="page-title">Розділ: Dashboard-I</h4>
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/dashboard">Dashboard-I</a></li>
+                        <li class="breadcrumb-item"><a href="/dashboard" title="Перехід на головну">
+                            <h6><i>Dashboard-I</i></h6></a>
+                        </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Main
+                            <i class="text-primary"><b>Основна.</b></i>
                         </li>
                     </ol>
                 </nav>
@@ -22,89 +22,67 @@
         </div>
     </div>
 </div>
-<!-- ============================================================== -->
 <!-- End Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
 
+<!-- Start HTML Calendar -->
+    <div class="s002">
+      <form>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+              </svg>
+            </div>
+            <input id="search" type="text" placeholder="Напишіть що хочете знайти?" />
+          </div>
+          <div class="input-field second-wrap">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+              </svg>
+            </div>
+            <input class="datepicker" id="depart" type="text" placeholder="29 Сер 2021" />
+          </div>
+          <div class="input-field third-wrap">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+              </svg>
+            </div>
+            <input class="datepicker" id="return" type="text" placeholder="30 Січ 2022" />
+          </div>
+          <div class="input-field fouth-wrap">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+              </svg>
+            </div>
+            <select data-trigger="" name="choices-single-defaul">
+              <option placeholder="">2 Пункт</option>
+              <option>3 Пункт</option>
+              {{-- <option>4 Adults</option>
+              <option>5 Adults</option> --}}
+            </select>
+          </div>
+          <div class="input-field fifth-wrap">
+            <button class="btn-search" type="button">Пошук</button>
+          </div>
+        </div>
+      </form>
+    </div>
+ <!-- End HTML Calendar -->
 
- <!-- ============================================================== -->
- <!-- Container fluid  -->
- <!-- ============================================================== -->
+ <!-- Start Container fluid  -->
+ <!-- ================================= -->
  <div class="container-fluid">
-     <!-- ============================================================== -->
-     <!-- Sales Cards  -->
-     <!-- ============================================================== -->
+    <!-- START Column!!! -->
      <div class="row">
-         <!-- Column -->
-         <div class="col-md-6 col-lg-2 col-xlg-3">
-            <a href="/dashboard2">
-             <div class="card card-hover">
-                 <div class="box bg-cyan text-center">
-                     <h1 class="font-light text-white">
-                         <i class="mdi mdi-view-dashboard"></i>
-                     </h1>
-                     <h6 class="text-white">Dashboard-II</h6>
-                 </div>
-             </div>
-            </a>
-         </div>
-         <!-- Column -->
-         <div class="col-md-6 col-lg-4 col-xlg-3">
-            <a href="/charts">
-             <div class="card card-hover">
-                 <div class="box bg-success text-center">
-                     <h1 class="font-light text-white">
-                         <i class="mdi mdi-chart-areaspline"></i>
-                     </h1>
-                     <h6 class="text-white">Графіки</h6>
-                 </div>
-             </div>
-            </a>
-         </div>
-         <!-- Column -->
-         <div class="col-md-6 col-lg-2 col-xlg-3">
-            <a href="/widgets">
-             <div class="card card-hover">
-                 <div class="box bg-warning text-center">
-                     <h1 class="font-light text-white">
-                         <i class="mdi mdi-collage"></i>
-                     </h1>
-                     <h6 class="text-white">Віджети</h6>
-                 </div>
-             </div>
-            </a>
-         </div>
-         <!-- Column -->
-         <div class="col-md-6 col-lg-2 col-xlg-3">
-            <a href="/organizer">
-             <div class="card card-hover">
-                 <div class="box bg-danger text-center">
-                     <h1 class="font-light text-white">
-                         <i class="mdi mdi-border-outside"></i>
-                     </h1>
-                     <h6 class="text-white">Органайзер</h6>
-                 </div>
-             </div>
-            </a>
-         </div>
-         <!-- Column -->
-         <div class="col-md-6 col-lg-2 col-xlg-3">
-            <a href="/parser">
-             <div class="card card-hover">
-                 <div class="box bg-info text-center">
-                     <h1 class="font-light text-white">
-                         <i class="mdi mdi-arrow-all"></i>
-                     </h1>
-                     <h6 class="text-white">Парсер</h6>
-                 </div>
-             </div>
-            </a>
-         </div>
-         <!-- Column -->
+          <!-- Column -->
          <div class="col-md-6 col-lg-4 col-xlg-3">
             <a href="/events">
              <div class="card card-hover">
-                 <div class="box bg-danger text-center">
+                 <div class="box bg-success text-center">
                      <h1 class="font-light text-white">
                          <i class="mdi mdi-bike"></i>
                      </h1>
@@ -115,35 +93,48 @@
          </div>
          <!-- Column -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
-            <a href="/partners">
-             <div class="card card-hover">
-                 <div class="box bg-info text-center">
-                     <h1 class="font-light text-white">
-                         <i class="mdi mdi-relative-scale"></i>
-                     </h1>
-                     <h6 class="text-white">Партнери</h6>
-                 </div>
-             </div>
-            </a>
-         </div>
-         <!-- Column -->
-         <div class="col-md-6 col-lg-2 col-xlg-3">
-            <a href="/letters">
+            <a href="/parser">
              <div class="card card-hover">
                  <div class="box bg-cyan text-center">
                      <h1 class="font-light text-white">
-                         <i class="mdi mdi-email-outline"></i>
+                         <i class="mdi mdi-arrow-all"></i>
                      </h1>
-                     <h6 class="text-white">Пошта</h6>
+                     <h6 class="text-white">Парсер</h6>
                  </div>
              </div>
             </a>
          </div>
-         <!-- Column -->
+         <!-- Column Charts -->
+         <div class="col-md-6 col-lg-4 col-xlg-3">
+            <a href="/charts">
+             <div class="card card-hover">
+                 <div class="box bg-warning text-center">
+                     <h1 class="font-light text-white">
+                         <i class="mdi mdi-chart-areaspline"></i>
+                     </h1>
+                     <h6 class="text-white">Графіки</h6>
+                 </div>
+             </div>
+            </a>
+         </div>
+         <!-- Column Widgets -->
+         <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/widgets">
+             <div class="card card-hover">
+                 <div class="box bg-danger text-center">
+                     <h1 class="font-light text-white">
+                         <i class="mdi mdi-collage"></i>
+                     </h1>
+                     <h6 class="text-white">Віджети</h6>
+                 </div>
+             </div>
+            </a>
+         </div>
+         <!-- Column Users -->
          <div class="col-md-6 col-lg-2 col-xlg-3" >
             <a href="/users">
              <div class="card card-hover">
-                 <div class="box bg-success text-center">
+                 <div class="box bg-info text-center">
                      <h1 class="font-light text-white">
                         <i class="mdi mdi-calendar-check"></i>
                      </h1>
@@ -152,24 +143,75 @@
              </div>
              </a>
          </div>
-         <!-- Column -->
+         <!-- Column Partners -->
          <div class="col-md-6 col-lg-2 col-xlg-3">
-            <a href="/logs">
+            <a href="/partners">
              <div class="card card-hover">
-                 <div class="box bg-warning text-center">
+                 <div class="box bg-primary text-center">
                      <h1 class="font-light text-white">
-                         <i class="mdi mdi-alert"></i>
+                         <i class="mdi mdi-relative-scale"></i>
                      </h1>
-                     <h6 class="text-white">Сервер</h6>
+                     <h6 class="text-white">Партнери</h6>
                  </div>
              </div>
             </a>
          </div>
-         <!-- Column -->
+         <!-- Column Organizer -->
+         <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/organizer">
+             <div class="card card-hover">
+                 <div class="box bg-dark text-center">
+                     <h1 class="font-light text-white">
+                         <i class="mdi mdi-border-outside"></i>
+                     </h1>
+                     <h6 class="text-white">Органайзер</h6>
+                 </div>
+             </div>
+            </a>
+         </div>
+         <!-- Column Dashboard2 -->
+         <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/dashboard2">
+             <div class="card card-hover">
+                 <div class="box bg-success text-center">
+                     <h1 class="font-light text-white">
+                         <i class="mdi mdi-view-dashboard"></i>
+                     </h1>
+                     <h6 class="text-white">Dashboard-II</h6>
+                 </div>
+             </div>
+            </a>
+         </div>
+         <!-- Column Bells -->
+         <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/bells">
+             <div class="card card-hover">
+                 <div class="box bg-cyan text-center">
+                     <h1 class="font-light text-white">
+                         <i class="mdi mdi-email-outline"></i>
+                     </h1>
+                     <h6 class="text-white">Повідомлення</h6>
+                 </div>
+             </div>
+            </a>
+         </div>
+         <!-- Column Letters -->
+         <div class="col-md-6 col-lg-2 col-xlg-3">
+            <a href="/letters">
+             <div class="card card-hover">
+                 <div class="box bg-secondary text-center">
+                     <h1 class="font-light text-white">
+                         <i class="mdi mdi-email-outline"></i>
+                     </h1>
+                     <h6 class="text-white">Пошта</h6>
+                 </div>
+             </div>
+            </a>
+         </div>
      </div>
-     <!-- ============================================================== -->
-     <!-- Sales chart -->
-     <!-- ============================================================== -->
+     <!-- END Column!!! -->
+     <!-- ================================= -->
+     <!-- Start Sales chart -->
      <div class="row">
          <div class="col-md-12">
              <div class="card">
@@ -181,7 +223,7 @@
                          </div>
                      </div>
                      <div class="row">
-                         <!-- column -->
+                         <!-- Start columns Blocks -->
                          <div class="col-lg-9">
                              <div class="flot-chart">
                                  <div class="flot-chart-content" id="flot-line-chart"></div>
@@ -233,18 +275,16 @@
                                  </div>
                              </div>
                          </div>
-                         <!-- column -->
+                         <!-- End columns blocks -->
                      </div>
                  </div>
              </div>
          </div>
      </div>
-     <!-- ============================================================== -->
-     <!-- Sales chart -->
-     <!-- ============================================================== -->
-     <!-- ============================================================== -->
+     <!-- ================================= -->
+     <!-- End Sales chart -->
+
      <!-- Recent comment and chats -->
-     <!-- ============================================================== -->
      <div class="row">
          <!-- column -->
          <div class="col-lg-6">
@@ -267,13 +307,13 @@
                              <div class="comment-footer">
                                  <span class="text-muted float-end">April 14, 2021</span>
                                  <button type="button" class="btn btn-cyan btn-sm text-white">
-                                     Edit
+                                     Інфо
                                  </button>
                                  <button type="button" class="btn btn-success btn-sm text-white">
-                                     Publish
+                                     Додати
                                  </button>
                                  <button type="button" class="btn btn-danger btn-sm text-white">
-                                     Delete
+                                     Видалити
                                  </button>
                              </div>
                          </div>
@@ -290,15 +330,15 @@
                                  type setting industry.
                              </span>
                              <div class="comment-footer">
-                                 <span class="text-muted float-end">May 10, 2021</span>
+                                 <span class="text-muted float-end">April 14, 2021</span>
                                  <button type="button" class="btn btn-cyan btn-sm text-white">
-                                     Edit
+                                     Інфо
                                  </button>
                                  <button type="button" class="btn btn-success btn-sm text-white">
-                                     Publish
+                                     Додати
                                  </button>
                                  <button type="button" class="btn btn-danger btn-sm text-white">
-                                     Delete
+                                     Видалити
                                  </button>
                              </div>
                          </div>
@@ -307,7 +347,6 @@
                      <div class="d-flex flex-row comment-row">
                          <div class="p-2">
                              <img src="/admin/assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle" />
-
                          </div>
                          <div class="comment-text w-100">
                              <h6 class="font-medium">Johnathan Doeting</h6>
@@ -315,15 +354,15 @@
                                  type setting industry.
                              </span>
                              <div class="comment-footer">
-                                 <span class="text-muted float-end">August 1, 2021</span>
+                                 <span class="text-muted float-end">April 14, 2021</span>
                                  <button type="button" class="btn btn-cyan btn-sm text-white">
-                                     Edit
+                                     Інфо
                                  </button>
                                  <button type="button" class="btn btn-success btn-sm text-white">
-                                     Publish
+                                     Додати
                                  </button>
                                  <button type="button" class="btn btn-danger btn-sm text-white">
-                                     Delete
+                                     Видалити
                                  </button>
                              </div>
                          </div>
@@ -382,11 +421,9 @@
                                  <ul class="list-style-none assignedto">
                                      <li class="assignee">
                                          <img class="rounded-circle" width="40" src="/admin/assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
-
                                      </li>
                                      <li class="assignee">
                                          <img class="rounded-circle" width="40" src="/admin/assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
-
                                      </li>
                                  </ul>
                              </li>
@@ -412,11 +449,9 @@
                                  <ul class="list-style-none assignedto">
                                      <li class="assignee">
                                          <img class="rounded-circle" width="40" src="/admin/assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka" />
-
                                      </li>
                                      <li class="assignee">
                                          <img class="rounded-circle" width="40" src="/admin/assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina" />
-
                                      </li>
                                  </ul>
                              </li>
@@ -551,7 +586,6 @@
              </div>
          </div>
          <!-- column -->
-
          <div class="col-lg-6">
              <!-- Card -->
              <div class="card">
@@ -564,7 +598,6 @@
                              <li class="chat-item">
                                  <div class="chat-img">
                                      <img src="/admin/assets/images/users/1.jpg" alt="user" />
-
                                  </div>
                                  <div class="chat-content">
                                      <h6 class="font-medium">James Anderson</h6>
@@ -579,7 +612,6 @@
                              <li class="chat-item">
                                  <div class="chat-img">
                                      <img src="/admin/assets/images/users/2.jpg" alt="user" />
-
                                  </div>
                                  <div class="chat-content">
                                      <h6 class="font-medium">Bianca Doe</h6>
@@ -612,7 +644,6 @@
                              <li class="chat-item">
                                  <div class="chat-img">
                                      <img src="/admin/assets/images/users/3.jpg" alt="user" />
-
                                  </div>
                                  <div class="chat-content">
                                      <h6 class="font-medium">Angelina Rhodes</h6>
@@ -649,7 +680,6 @@
                      <div class="d-flex flex-row comment-row mt-0">
                          <div class="p-2">
                              <img src="/admin/assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle" />
-
                          </div>
                          <div class="comment-text w-100">
                              <h6 class="font-medium">James Anderson</h6>
@@ -674,7 +704,6 @@
                      <div class="d-flex flex-row comment-row">
                          <div class="p-2">
                              <img src="/admin/assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle" />
-
                          </div>
                          <div class="comment-text active w-100">
                              <h6 class="font-medium">Michael Jorden</h6>
@@ -699,7 +728,6 @@
                      <div class="d-flex flex-row comment-row">
                          <div class="p-2">
                              <img src="/admin/assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle" />
-
                          </div>
                          <div class="comment-text w-100">
                              <h6 class="font-medium">Johnathan Doeting</h6>
@@ -837,7 +865,6 @@
                                  the comment..
                              </p>
                              <img src="/admin/assets/images/background/img4.jpg" class="img-fluid" />
-
                          </div>
                      </div>
                      <div class="tab-pane p-20" id="profile" role="tabpanel">
@@ -863,21 +890,16 @@
                                  the comment..
                              </p>
                              <img src="/admin/assets/images/background/img4.jpg" class="img-fluid" />
-
                          </div>
                      </div>
                  </div>
              </div>
          </div>
      </div>
-     <!-- ============================================================== -->
      <!-- Recent comment and chats -->
-     <!-- ============================================================== -->
  </div>
- <!-- ============================================================== -->
  <!-- End Container fluid  -->
- <!-- ============================================================== -->
-
+ <!-- ================================= -->
 
 
 @stop

@@ -1,11 +1,8 @@
 @extends('layouts.admin')
-
 @section('title', 'organizer')
-
 @section('content')
 
 <!-- Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
@@ -13,9 +10,11 @@
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/dashboard">Dashboard-I</a></li>
+                        <li class="breadcrumb-item"><a href="/dashboard" title="Перехід на головну">
+                            <h6><i>Dashboard-I</i></h6></a>
+                        </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Органайзер
+                            <i class="text-primary"><b>Органайзер.</b></i>
                         </li>
                     </ol>
                 </nav>
@@ -23,16 +22,13 @@
         </div>
     </div>
 </div>
-<!-- ============================================================== -->
 <!-- End Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
-<!-- ============================================================== -->
-<!-- Container fluid  -->
-<!-- ============================================================== -->
+
+<!-- Start Container fluid  -->
+<!-- ================================ -->
 <div class="container-fluid">
-    <!-- ============================================================== -->
     <!-- Start Page Content -->
-    <!-- ============================================================== -->
+    <!-- ================================ -->
     <div class="row">
         <!-- Column -->
         <div class="col-md-6 col-lg-3">
@@ -52,7 +48,7 @@
                     <h1 class="font-light text-white">
                         <i class="mdi mdi-chart-areaspline"></i>
                     </h1>
-                    <h6 class="text-white">Charts</h6>
+                    <h6 class="text-white">Графіки</h6>
                 </div>
             </div>
         </div>
@@ -63,7 +59,7 @@
                     <h1 class="font-light text-white">
                         <i class="mdi mdi-collage"></i>
                     </h1>
-                    <h6 class="text-white">Widgets</h6>
+                    <h6 class="text-white">Віджети</h6>
                 </div>
             </div>
         </div>
@@ -74,7 +70,7 @@
                     <h1 class="font-light text-white">
                         <i class="mdi mdi-border-outside"></i>
                     </h1>
-                    <h6 class="text-white">Tables</h6>
+                    <h6 class="text-white">Нотатки</h6>
                 </div>
             </div>
         </div>
@@ -83,7 +79,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Latest Posts</h4>
+                    <h4 class="card-title">Додані повідомлення</h4>
                 </div>
                 <div class="comment-widgets scrollable">
                     <!-- Comment Row -->
@@ -99,13 +95,13 @@
                             <div class="comment-footer">
                                 <span class="text-muted float-end">April 14, 2021</span>
                                 <button type="button" class="btn btn-cyan btn-sm text-white">
-                                    Edit
+                                    Інфо
                                 </button>
                                 <button type="button" class="btn btn-success btn-sm text-white">
-                                    Publish
+                                    Додати
                                 </button>
                                 <button type="button" class="btn btn-danger btn-sm text-white">
-                                    Delete
+                                    Видалити
                                 </button>
                             </div>
                         </div>
@@ -121,15 +117,15 @@
                                 type setting industry.
                             </span>
                             <div class="comment-footer">
-                                <span class="text-muted float-end">May 10, 2021</span>
+                                <span class="text-muted float-end">April 14, 2021</span>
                                 <button type="button" class="btn btn-cyan btn-sm text-white">
-                                    Edit
+                                    Інфо
                                 </button>
                                 <button type="button" class="btn btn-success btn-sm text-white">
-                                    Publish
+                                    Додати
                                 </button>
                                 <button type="button" class="btn btn-danger btn-sm text-white">
-                                    Delete
+                                    Видалити
                                 </button>
                             </div>
                         </div>
@@ -145,15 +141,15 @@
                                 type setting industry.
                             </span>
                             <div class="comment-footer">
-                                <span class="text-muted float-end">August 1, 2021</span>
+                                <span class="text-muted float-end">April 14, 2021</span>
                                 <button type="button" class="btn btn-cyan btn-sm text-white">
-                                    Edit
+                                    Інфо
                                 </button>
                                 <button type="button" class="btn btn-success btn-sm text-white">
-                                    Publish
+                                    Додати
                                 </button>
                                 <button type="button" class="btn btn-danger btn-sm text-white">
-                                    Delete
+                                    Видалити
                                 </button>
                             </div>
                         </div>
@@ -163,7 +159,7 @@
             <!-- Card -->
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">To Do List</h4>
+                    <h4 class="card-title">"To Do" Лист</h4>
                     <div class="todo-widget scrollable" style="height: 450px">
                         <ul class="list-task todo-list list-group mb-0" data-role="tasklist">
                             <li class="list-group-item todo-item" data-role="task">
@@ -172,7 +168,7 @@
                                     <label class="form-check-label mb-0 w-100 todo-label" for="customCheck">
                                         <span class="todo-desc fw-normal">Lorem Ipsum is simply dummy text of the printing
                                             and typesetting industry.</span>
-                                        <span class="badge rounded-pill bg-danger float-end">Today</span>
+                                        <span class="badge rounded-pill bg-danger float-end">Сьогодні</span>
                                     </label>
                                 </div>
                                 <ul class="list-style-none assignedto">
@@ -201,14 +197,14 @@
                                         </span>
                                     </label>
                                 </div>
-                                <div class="item-date">26 jun 2021</div>
+                                <div class="item-date">26 липня 2021</div>
                             </li>
                             <li class="list-group-item todo-item" data-role="task">
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="customCheck2" />
                                     <label class="form-check-label mb-0 w-100 todo-label" for="customCheck2">
                                         <span class="todo-desc fw-normal">Give Purchase report to</span>
-                                        <span class="badge rounded-pill bg-info float-end">Yesterday</span>
+                                        <span class="badge rounded-pill bg-info float-end">Вчора</span>
                                     </label>
                                 </div>
                                 <ul class="list-style-none assignedto">
@@ -229,14 +225,14 @@
                                         <span class="badge rounded-pill bg-warning float-end">2 weeks</span>
                                     </label>
                                 </div>
-                                <div class="item-date">26 jun 2021</div>
+                                <div class="item-date">26 червня 2021</div>
                             </li>
                             <li class="list-group-item todo-item" data-role="task">
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="customCheck4" />
                                     <label class="form-check-label mb-0 w-100 todo-label" for="customCheck4">
                                         <span class="todo-desc fw-normal">Give Purchase report to</span>
-                                        <span class="badge rounded-pill bg-info float-end">Yesterday</span>
+                                        <span class="badge rounded-pill bg-info float-end">Вчора</span>
                                     </label>
                                 </div>
                                 <ul class="list-style-none assignedto">
@@ -257,7 +253,7 @@
             <!-- card -->
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-0">Progress Box</h4>
+                    <h4 class="card-title mb-0">Прогрес задач</h4>
                     <div class="mt-3">
                         <div class="d-flex no-block align-items-center">
                             <span>81% Clicks</span>
@@ -307,7 +303,7 @@
             <!-- card new -->
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-0">News Updates</h4>
+                    <h4 class="card-title mb-0">Нові повідомлення</h4>
                 </div>
                 <ul class="list-style-none">
                     <li class="d-flex no-block card-body">
@@ -513,22 +509,17 @@
             </div>
         </div>
     </div>
+    <!-- ============================ -->
     <!-- END MODAL -->
 
-    <!-- ============================================================== -->
+    <!-- ============================ -->
     <!-- End PAge Content -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Right sidebar -->
-    <!-- ============================================================== -->
-    <!-- .right-sidebar -->
-    <!-- ============================================================== -->
+
+    <!-- ============================ -->
     <!-- End Right sidebar -->
-    <!-- ============================================================== -->
 </div>
-<!-- ============================================================== -->
+<!-- ============================ -->
 <!-- End Container fluid  -->
-<!-- ============================================================== -->
 
 @stop
 

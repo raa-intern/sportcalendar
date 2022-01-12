@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Users;
 use App\Models\Events;
 use App\Models\Parser;
 use App\Models\Partners;
-use App\Models\Users;
+use App\Models\Widgets;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
@@ -14,11 +15,6 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function dashboard()
     {
         return view('admin/dashboard', [
@@ -53,8 +49,12 @@ class AdminController extends Controller
 
     public function widgets_list()
     {
+        $widgetsModel = new Widgets();
+        $widgets = $widgetsModel->getWidgets();
         return view('admin/widgets', [
-            'user' => 'admin']);
+            'user' => 'admin',
+            'widgets' => $widgets
+        ]);
     }
 
     public function partners_list()
@@ -63,10 +63,10 @@ class AdminController extends Controller
         $partners = $partnersModel->getPartners();
         return view('admin/partners', [
             'user' => 'admin',
-            'users' => $partners
+            'partners' => $partners
         ]);
     }
-    
+
     public function users_list()
     {
         $usersModel = new Users();
@@ -95,78 +95,9 @@ class AdminController extends Controller
             'user' => 'admin']);
     }
 
-    public function letters_list()
-    {
-        return view('admin/letters', [
-            'user' => 'admin']);
-    }
-
     public function logs_monitor()
     {
         return view('admin/logs', [
             'user' => 'admin']);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Admin $admin)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Admin $admin)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Admin $admin)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Admin $admin)
-    {
-        //
     }
 }

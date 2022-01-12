@@ -1,11 +1,8 @@
 @extends('layouts.admin')
-
 @section('title', 'bells')
-
 @section('content')
 
 <!-- Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
@@ -13,9 +10,11 @@
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/dashboard">Dashboard-I</a></li>
+                        <li class="breadcrumb-item"><a href="/dashboard" title="Перехід на головну">
+                            <h6><i>Dashboard-I</i></h6></a>
+                        </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Повідомлення
+                            <i class="text-primary"><b>Повідомлення.</b></i>
                         </li>
                     </ol>
                 </nav>
@@ -23,16 +22,13 @@
         </div>
     </div>
 </div>
-<!-- ============================================================== -->
 <!-- End Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
-<!-- ============================================================== -->
+
 <!-- Container fluid  -->
-<!-- ============================================================== -->
+<!-- ================================ -->
 <div class="container-fluid">
-    <!-- ============================================================== -->
     <!-- Start Page Content -->
-    <!-- ============================================================== -->
+    <!-- ================================ -->
     <div class="row">
         <div class="col-12">
             <div class="card">

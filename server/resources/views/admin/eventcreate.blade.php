@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'events')
+@section('title', 'eventscreate')
 
 @section('content')
     <!-- Bread crumb and right sidebar toggle -->

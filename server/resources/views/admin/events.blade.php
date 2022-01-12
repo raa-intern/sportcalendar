@@ -1,20 +1,20 @@
 @extends('layouts.admin')
-
 @section('title', 'events')
-
 @section('content')
+
 <!-- Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-            <h4 class="page-title">Спорт-події</h4>
+            <h4 class="page-title">Розділ: "Спорт-події"!</h4>
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/dashboard">Dashboard-I</a></li>
+                        <li class="breadcrumb-item"><a href="/dashboard" title="Перехід на головну">
+                            <h6><i>Dashboard-I</i></h6></a>
+                        </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Спорт-події
+                            <i class="text-primary"><b>Спорт-події.</b></i>
                         </li>
                     </ol>
                 </nav>
@@ -22,15 +22,13 @@
         </div>
     </div>
 </div>
-<!-- ============================================================== -->
 <!-- End Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
+
 <!-- Container fluid  -->
-<!-- ============================================================== -->
+<!-- ======================================== -->
 <div class="container-fluid">
-    <!-- ============================================================== -->
     <!-- Start Page Content -->
-    <!-- ============================================================== -->
+    <!-- ======================================= -->
     @if(isset($delete))
         <div class="card">
             <div class="card-body">
@@ -51,117 +49,16 @@
     @endif
     <div class="row">
         <div class="col-12">
+            {{-- 1 Actual Report Events Table --}}
             <div class="card">
                 <div class="card-body">
                     <div>
-                        <h5 class="card-title">Список доданних спорт-подій в <strong>Sportcalendar</strong></h5>
+                        <h5 class="card-title">1. Список доданних спорт-подій в <strong>Sportcalendar:</strong></h5>
                         <form action="{{ route('event_create') }}" method="GET">
                             @csrf
-                            <button type="submit" class="btn btn-cyan btn-sm text-white submit" >Додати подію!</button>
+                            <button type="submit" class="btn btn-success btn-sm text-white submit">Додати Спорт-подію!</button>
                         </form>
-
                     </div>
-                    <div class="table-responsive">
-                        <table id="zero_config" class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Назва</th>
-                                    <th>Категорія</th>
-                                    <th>Місто</th>
-                                    <th>Тип події</th>
-                                    <th>Адреса</th>
-                                    <th>Дата</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($events as $event)
-                                <tr>
-                                    <td>{{ $event->event_name }}</td>
-                                    <td>{{ $event->category_id }}</td>
-                                    <td>{{ $event->city }}</td>
-                                    <td>{{ $event->event_type }}</td>
-                                    <td>{{ $event->street }}</td>
-                                    <td>{{ $event->start_date }}</td>
-                                    <td>
-                                        <i class="mdi mdi-television-guide"></i><a href="/event/show/{{$event->id}}" aria-expanded="false"><span class="hide-menu"><b>Show</b></span></a>
-                                        <i class="mdi mdi-pencil"></i><a href="/event/edit/{{ $event->id }}" aria-expanded="false"><span class="hide-menu"><b>Edit</b></span></a>
-                                        <i class="mdi mdi-archive"></i><a href="/event/delete/{{ $event->id }}" aria-expanded="false"><span class="hide-menu"><b>Delete</b></span></a>
-                                    </td>
-                                </tr>
-                                @endforeach
-                                <!-- Second example part temp for demo sheets/table -->
-                                {{-- <tr>
-                                    <td>Michael Silva</td>
-                                    <td>Marketing Designer</td>
-                                    <td>London</td>
-                                    <td>66</td>
-                                    <td>2012/11/27</td>
-                                    <td>$198,500</td>
-                                    <td>
-                                        <div class="border-top">
-                                            <div class="card-body">
-                                                <button type="submit" class="btn btn-success text-white">Show</button>
-                                                <button type="submit" class="btn btn-info">Edit</button>
-                                                <button type="submit" class="btn btn-danger text-white">Del</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr> --}}
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Назва</th>
-                                    <th>Категорія</th>
-                                    <th>Місто</th>
-                                    <th>Тип події</th>
-                                    <th>Адреса</th>
-                                    <th>Дата</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title mb-0">Static Table</h5>
-                </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title mb-0">Static Table With Checkboxes</h5>
                 </div>
                 <div class="table-responsive">
                     <table class="table">
@@ -173,124 +70,122 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </th>
-                                <th scope="col">Rendering engine</th>
-                                <th scope="col">Browser</th>
-                                <th scope="col">Platform(s)</th>
-                                <th scope="col">Engine version</th>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>Категорія</th>
+                                <th>Місто</th>
+                                <th>Тип події</th>
+                                <th>Фото події</th>
+                                <th>Адреса</th>
+                                <th>Дата</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody class="customtable">
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-                                <td>Trident</td>
-                                <td>Internet Explorer 4.0</td>
-                                <td>Win 95+</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-                                <td>Trident</td>
-                                <td>Internet Explorer 5.0</td>
-                                <td>Win 95+</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-                                <td>Trident</td>
-                                <td>Internet Explorer 4.0</td>
-                                <td>Win 95+</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-                                <td>Trident</td>
-                                <td>Internet Explorer 5.0</td>
-                                <td>Win 95+</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-                                <td>Trident</td>
-                                <td>Internet Explorer 5.5</td>
-                                <td>Win 95+</td>
-                                <td>5.5</td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-                                <td>Trident</td>
-                                <td>Internet Explorer 6</td>
-                                <td>Win 98+</td>
-                                <td>6</td>
-                            </tr>
+                            @foreach($events as $event)
+                                <tr>
+                                    <td>
+                                        <label class="customcheckbox mb-3">
+                                            <input type="checkbox" id="mainCheckbox" />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>{{ $events->firstItem()+$loop->index }}</td>
+                                    <td>{{ $event->event_name }}</td>
+                                    <td>{{ $event->category_id }}</td>
+                                    <td>{{ $event->city }}</td>
+                                    <td>{{ $event->event_type }}</td>
+                                    <td>
+                                        <div class="el-card-avatar el-overlay-1">
+                                            <img src="/admin/assets/images/intro/{{ $event->image_intro }}" width="140" height="80" alt="image_intro" />
+                                            <div class="el-overlay">
+                                                <ul class="list-style-none el-info">
+                                                    <li class="el-item">
+                                                        <a class="btn default btn-outline image-popup-vertical-fit el-link"
+                                                        href="/admin/assets/images/full/{{ $event->image_full }}"><i class="mdi mdi-magnify-plus"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{{ $event->street }}</td>
+                                    <td>{{ $event->start_date }}</td>
+                                    <td width="40" height="80">
+                                        <div>
+                                            <ul style="list-style:none;">
+                                                <li><a href="/event/show/{{ $event->id }}"><span class="badge rounded-pill bg-cyan float-end">Show</span></a></li>
+                                                <li><a href="/event/edit/{{ $event->id }}"><span class="badge rounded-pill bg-secondary float-end">Edit</span></a></li>
+                                                <li><a href="/event/delete/{{ $event->id }}"><span class="badge rounded-pill bg-danger float-end">Delete</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @endforeach
                         </tbody>
                     </table>
+                    {{ $events->onEachSide(5)->links('pagination::bootstrap-4') }}
+                    <div style="text-align:center; padding-right: 10px; padding-left: 900px">
+                        <p class="text-white-50 bg-dark"><i>Загальна кількість подій в базі </i><b> Sportcalendar: <span class="text-white">{{ $events->total() }}</span></b></p>
+                    </div>
                 </div>
             </div>
+            {{-- 2 TOP Report Events Table --}}
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Collspan Table Example</h5>
-                </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    <h5 class="card-title">2. Топові події - "TOP Chart"! :</h5>
+                    <div class="table-responsive">
+                        <table id="zero_config" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Назва</th>
+                                    <th>Категорія</th>
+                                    <th>Місто</th>
+                                    <th>Тип події</th>
+                                    <th>Фото події</th>
+                                    <th>Адреса</th>
+                                    <th>Дата</th>
 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($events as $event)
+                                <tr>
+                                    <td>{{ $events->firstItem()+$loop->index }}</td>
+                                    <td>{{ $event->event_name }}</td>
+                                    <td>{{ $event->category_id }}</td>
+                                    <td>{{ $event->city }}</td>
+                                    <td>{{ $event->event_type }}</td>
+                                    <td>{{ $event->image_intro }}</td>
+                                    <td>{{ $event->street }}</td>
+                                    <td>{{ $event->start_date }}</td>
+
+                                        {{-- <ul style="text-align:left; list-style:none">
+                                            <li class="sidebar-item">
+                                                <i class="mdi mdi-television-guide"></i>
+                                                <a href="/event/show/{{ $event->id }}" aria-expanded="false"><span class="hide-menu"><b>Покaзати</b></span></a>
+                                            </li>
+                                            <li class="sidebar-item">
+                                                <i class="mdi mdi-pencil"></i>
+                                                <a href="/event/edit/{{ $event->id }}" aria-expanded="false"><span class="hide-menu"><b>Редагувати</b></span></a>
+                                            </li>
+                                            <li class="sidebar-item">
+                                                <i class="mdi mdi-archive"></i>
+                                                <a href="/event/delete/{{ $event->id }}" aria-expanded="false"><span class="hide-menu"><b>Видалити</b></span></a>
+                                            </li>
+                                        </ul> --}}
+
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        {{ $events->onEachSide(5)->links('pagination::bootstrap-4') }}
+                        <div style="text-align:center; padding-right: 10px; padding-left: 820px">
+                            <p class="text-white-50 bg-dark"><i>Окремий список ТОПових подій, загальна кількість: </i><b><span class="text-white">{{ $events->total() }}</span></b>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- ============================================================== -->
@@ -303,6 +198,7 @@
     <!-- ============================================================== -->
     <!-- End Right sidebar -->
     <!-- ============================================================== -->
+
 </div>
 <!-- ============================================================== -->
 <!-- End Container fluid  -->

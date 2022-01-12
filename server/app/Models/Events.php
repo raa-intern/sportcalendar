@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
 
 class Events extends Model
 {
     // use HasFactory;
-
-    public function getEvents()
+     public function getEvents()
     {
         return DB::table('events')
             ->select(
@@ -39,7 +39,9 @@ class Events extends Model
                 "created_at",
                 "updated_at"
             )
-            ->get();
+            ->latest()
+            ->paginate(2);
+
     }
 
     public function getEventByID($id)
@@ -90,7 +92,8 @@ class Events extends Model
             ->delete();
     }
 
-    public function createEvent($request){
+    public function createEvent($request)
+    {
 
         $data = $request->all();
 
@@ -129,7 +132,8 @@ class Events extends Model
             ]);
     }
 
-    public function saveEvent($request, $id){
+    public function saveEvent($request, $id)
+    {
         $data = $request->all();
 
         $filename_image_intro = md5(microtime() . rand(0, 9999)) . '.' . $data['image_intro']->getClientOriginalExtension();
@@ -166,8 +170,6 @@ class Events extends Model
                 "created_at"            => $data['created_at'],
                 "updated_at"            => $data['updated_at'],
             ]);
-
     }
-
 
 }

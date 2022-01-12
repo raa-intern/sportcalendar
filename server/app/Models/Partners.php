@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Partners extends Model
 {
-    // use HasFactory;
+    //use HasFactory;
     public function getPartners() 
     {
         // return DB::table('users')
